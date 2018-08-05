@@ -530,3 +530,58 @@ Processing by UsersController#index as JSON
 Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 1.3ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(760180102898772885)[0m
+  ↳ bin/rails:9
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateHelperTypes (20180805002441)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (993.9ms)[0m  [1m[35mCREATE TABLE "helper_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180805002441_create_helper_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180805002441"]]
+  ↳ bin/rails:9
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (48.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(760180102898772885)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/helper_types" for 127.0.0.1 at 2018-08-05 08:50:10 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HelperTypesController#index as JSON
+  [1m[36mHelperType Load (0.3ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mHelperType Load (0.3ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `json_response' for #<HelperTypesController:0x0000559b5052d870>):
+  
+app/controllers/helper_types_controller.rb:7:in `index'
+  [1m[36mHelperType Load (0.2ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/helper_types" for 127.0.0.1 at 2018-08-05 08:50:55 +0700
+Processing by HelperTypesController#index as JSON
+  [1m[36mHelperType Load (0.4ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE HelperType Load (0.0ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `json_response' for #<HelperTypesController:0x0000559b4f4e3f78>):
+  
+app/controllers/helper_types_controller.rb:7:in `index'
+  [1m[36mCACHE HelperType Load (0.0ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/fahmi/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
