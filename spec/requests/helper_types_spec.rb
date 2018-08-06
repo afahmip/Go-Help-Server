@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "HelperTypes API", type: :request do
-  let!(:helper_types) { create_list(:helper_type, 10) }
+  let!(:helper) { create(:helper) }
+  let!(:helper_types) { create_list(:helper_type, 10, helper_id: helper.id) }
+  let(:helper_id) { helper.id }
   let(:helper_type_id) { helper_types.first.id }
 
   describe "GET /helper_types" do
