@@ -1191,3 +1191,43 @@ Processing by HelperController#index as JSON
 Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-06 18:43:57 +0700
+  [1m[35m (61.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/fahmi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/fahmi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (30.6ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-08-06 18:44:02 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (45.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (70.1ms)
+Completed 200 OK in 102ms (Views: 28.0ms | ActiveRecord: 50.9ms)
+
+
+Started GET "/helper_types" for 127.0.0.1 at 2018-08-06 18:44:07 +0700
+Processing by HelperTypesController#index as JSON
+  [1m[36mHelperType Load (241.6ms)[0m  [1m[34mSELECT "helper_types".* FROM "helper_types"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 350ms (Views: 87.1ms | ActiveRecord: 253.5ms)
+
+
+Started GET "/helper" for 127.0.0.1 at 2018-08-06 18:44:13 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (195.9ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 215ms (Views: 4.8ms | ActiveRecord: 199.1ms)
+
+
+Started GET "/helper_types/1" for 127.0.0.1 at 2018-08-06 18:44:19 +0700
+Processing by HelperTypesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mHelperType Load (2.3ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" WHERE "helper_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/helper_types_controller.rb:39
+Completed 200 OK in 107ms (Views: 1.1ms | ActiveRecord: 2.9ms)
+
+
