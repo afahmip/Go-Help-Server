@@ -10,11 +10,14 @@ class HelperController < ApplicationController
   # POST /helper
   def create
     @helper = Helper.create!(helper_params)
+    @helper_type = HelperType.find(params[:helper_type_id])
+    puts @helper_type.name
     json_response(@helper, :created)
   end
 
   # GET /helper/:id
   def show
+    puts helper_params
     json_response(@helper)
   end
 
@@ -38,6 +41,5 @@ class HelperController < ApplicationController
 
   def set_helper
     @helper = Helper.find(params[:id])
-    @helper_type = HelperType.find(params[:helper_type_id])
   end
 end

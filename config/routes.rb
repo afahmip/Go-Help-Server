@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :users, defaults: {format: :json}
   resources :helper, defaults: {format: :json}
   resources :helper_types, defaults: {format: :json}
+  resources :user_requests, defaults: {format: :json}
 end

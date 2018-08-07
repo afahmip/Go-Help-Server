@@ -1355,3 +1355,496 @@ FOREIGN KEY ("helper_type_id")
   ↳ bin/rails:9
   [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
   ↳ bin/rails:9
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 21:46:45 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.5ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/helper" for 127.0.0.1 at 2018-08-07 21:46:49 +0700
+Processing by HelperController#create as JSON
+  Parameters: {"name"=>"John Doe", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1", "helper"=>{"name"=>"John Doe", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1"}}
+Unpermitted parameters: :format, :helper
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[36mHelper Create (1.8ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "John Doe"], ["email", "john@doe.com"], ["password", "johndoe123"], ["phone_number", "322013934"], ["helper_type_id", 1], ["created_at", "2018-08-07 14:46:49.737249"], ["updated_at", "2018-08-07 14:46:49.737249"]]
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/helper_controller.rb:12
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 4.4ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "helpers" violates foreign key constraint "fk_rails_2493792845"
+DETAIL:  Key (helper_type_id)=(1) is not present in table "helper_types".
+: INSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"):
+  
+app/controllers/helper_controller.rb:12:in `create'
+Started POST "/helper" for 127.0.0.1 at 2018-08-07 21:47:38 +0700
+Processing by HelperController#create as JSON
+  Parameters: {"name"=>"John Doe", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1", "helper"=>{"name"=>"John Doe", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1"}}
+Unpermitted parameters: :format, :helper
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[36mHelper Create (0.7ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "John Doe"], ["email", "john@doe.com"], ["password", "johndoe123"], ["phone_number", "322013934"], ["helper_type_id", 1], ["created_at", "2018-08-07 14:47:49.005672"], ["updated_at", "2018-08-07 14:47:49.005672"]]
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/helper_controller.rb:12
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 5.1ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "helpers" violates foreign key constraint "fk_rails_2493792845"
+DETAIL:  Key (helper_type_id)=(1) is not present in table "helper_types".
+: INSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"):
+  
+app/controllers/helper_controller.rb:12:in `create'
+Started GET "/helper_types/1" for 127.0.0.1 at 2018-08-07 21:48:10 +0700
+Processing by HelperTypesController#show as JSON
+  Parameters: {"id"=>"1", "helper_type"=>{}}
+  [1m[36mHelperType Load (0.3ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" WHERE "helper_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/helper_types_controller.rb:39
+Completed 404 Not Found in 8ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/helper_types" for 127.0.0.1 at 2018-08-07 21:48:14 +0700
+Processing by HelperTypesController#index as JSON
+  Parameters: {"helper_type"=>{}}
+  [1m[36mHelperType Load (0.2ms)[0m  [1m[34mSELECT "helper_types".* FROM "helper_types"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/helper_types" for 127.0.0.1 at 2018-08-07 21:48:30 +0700
+Processing by HelperTypesController#create as JSON
+  Parameters: {"name"=>"Polisi", "helper_type"=>{"name"=>"Polisi"}}
+Unpermitted parameters: :format, :helper_type
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/helper_types_controller.rb:17
+  [1m[36mHelperType Create (0.4ms)[0m  [1m[32mINSERT INTO "helper_types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Polisi"], ["created_at", "2018-08-07 14:48:30.197433"], ["updated_at", "2018-08-07 14:48:30.197433"]]
+  ↳ app/controllers/helper_types_controller.rb:17
+  [1m[35m (108.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/helper_types_controller.rb:17
+Completed 201 Created in 115ms (Views: 1.1ms | ActiveRecord: 108.8ms)
+
+
+Started GET "/helper_types" for 127.0.0.1 at 2018-08-07 21:48:40 +0700
+Processing by HelperTypesController#index as JSON
+  [1m[36mHelperType Load (0.2ms)[0m  [1m[34mSELECT "helper_types".* FROM "helper_types"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/helper" for 127.0.0.1 at 2018-08-07 21:48:45 +0700
+Processing by HelperController#create as JSON
+  Parameters: {"name"=>"John Doe", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1", "helper"=>{"name"=>"John Doe", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1"}}
+Unpermitted parameters: :format, :helper
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[36mHelper Create (0.4ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "John Doe"], ["email", "john@doe.com"], ["password", "johndoe123"], ["phone_number", "322013934"], ["helper_type_id", 1], ["created_at", "2018-08-07 14:48:45.418003"], ["updated_at", "2018-08-07 14:48:45.418003"]]
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/helper_controller.rb:12
+Completed 201 Created in 41ms (Views: 0.3ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 21:50:08 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 21:50:16 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/helper/1" for 127.0.0.1 at 2018-08-07 21:50:59 +0700
+Processing by HelperController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:40
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/helper/3" for 127.0.0.1 at 2018-08-07 21:51:06 +0700
+Processing by HelperController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:40
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 21:51:20 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/helper" for 127.0.0.1 at 2018-08-07 21:55:58 +0700
+Processing by HelperController#create as JSON
+  Parameters: {"name"=>"John Can", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1", "helper"=>{"name"=>"John Can", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1"}}
+Unpermitted parameters: :format, :helper
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "John Can"], ["email", "john@doe.com"], ["password", "johndoe123"], ["phone_number", "322013934"], ["helper_type_id", 1], ["created_at", "2018-08-07 14:55:58.086457"], ["updated_at", "2018-08-07 14:55:58.086457"]]
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[35m (122.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/helper_controller.rb:12
+Completed 201 Created in 133ms (Views: 0.9ms | ActiveRecord: 125.2ms)
+
+
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 21:56:35 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.3ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/helper/4" for 127.0.0.1 at 2018-08-07 21:56:45 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:42
+Completed 404 Not Found in 5ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/helper/4" for 127.0.0.1 at 2018-08-07 23:17:49 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mHelper Load (0.3ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:41
+Completed 404 Not Found in 15ms (Views: 0.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/helper/4" for 127.0.0.1 at 2018-08-07 23:17:58 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:41
+Unpermitted parameters: :format, :id
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helper/4" for 127.0.0.1 at 2018-08-07 23:20:11 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:43
+Unpermitted parameters: :format, :id
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/helper" for 127.0.0.1 at 2018-08-07 23:20:22 +0700
+Processing by HelperController#create as JSON
+  Parameters: {"name"=>"He Can", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1", "helper"=>{"name"=>"He Can", "email"=>"john@doe.com", "password"=>"[FILTERED]", "phone_number"=>"322013934", "helper_type_id"=>"1"}}
+Unpermitted parameters: :format, :helper
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[36mHelper Create (0.5ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "helper_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "He Can"], ["email", "john@doe.com"], ["password", "johndoe123"], ["phone_number", "322013934"], ["helper_type_id", 1], ["created_at", "2018-08-07 16:20:22.757100"], ["updated_at", "2018-08-07 16:20:22.757100"]]
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/helper_controller.rb:12
+  [1m[36mHelperType Load (0.3ms)[0m  [1m[34mSELECT  "helper_types".* FROM "helper_types" WHERE "helper_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/helper_controller.rb:13
+Completed 201 Created in 53ms (Views: 0.6ms | ActiveRecord: 39.7ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(760180102898772885)[0m
+  ↳ bin/rails:9
+  [1m[35m (42.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUserRequests (20180807223203)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (870.4ms)[0m  [1m[35mCREATE TABLE "user_requests" ("id" bigserial primary key, "user_id" integer, "helper_id" integer, "longitude" float, "latitude" float, "device_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180807223203_create_user_requests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180807223203"]]
+  ↳ bin/rails:9
+  [1m[35m (42.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (50.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(760180102898772885)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-08 05:59:36 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.4ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:01:03 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>"1", "helper_id"=>"1", "device_id"=>"34343-434", "longitude"=>"123.4253167", "latitude"=>"453.2341523", "user_request"=>{"user_id"=>"1", "helper_id"=>"1", "longitude"=>"123.4253167", "latitude"=>"453.2341523", "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 118ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:01:17 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>"1", "helper_id"=>"1", "device_id"=>"34343-434", "longitude"=>123.4253167, "latitude"=>"453.2341523", "user_request"=>{"user_id"=>"1", "helper_id"=>"1", "longitude"=>123.4253167, "latitude"=>"453.2341523", "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:01:37 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "device_id"=>"34343-434", "longitude"=>123.4253167, "latitude"=>453.2341523, "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123.4253167, "latitude"=>453.2341523, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:02:15 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123.4253167, "latitude"=>453.2341523, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123.4253167, "latitude"=>453.2341523, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:02:59 +0700
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"user_id": 1,
+	"helper_id": 1,
+	"longitude": 123,4253167,
+	"latitude": 453.2341523,
+	"device_id": "34343-434"
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+	"user_id": 1,
+	"helper_id": 1,
+	"longitude": 123,4253167,
+	"latitude": 453.2341523,
+	"device_id": "34343-434"
+}'):
+  
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:03:04 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123.4253167, "latitude"=>453.2341523, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123.4253167, "latitude"=>453.2341523, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:03:09 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:03:21 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "Longitude"=>123, "latitude"=>453, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :Longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:03:26 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-08 06:03:40 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:10 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:22 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "user_request"=>{"user_id"=>1, "helper_id"=>1}}
+Unpermitted parameters: :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:34 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "user_request"=>{"user_id"=>1}}
+Unpermitted parameters: :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:44 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "user_request"=>{"user_id"=>1, "helper_id"=>1}}
+Unpermitted parameters: :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:47 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:53 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "longitude"=>123, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:06:57 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "latitude"=>453, "longitude"=>123, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :longitude, :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-08 06:07:12 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_id"=>1, "latitude"=>453, "longitude"=>123, "device_id"=>"34343-434", "user_request"=>{"user_id"=>1, "helper_id"=>1, "longitude"=>123, "latitude"=>453, "device_id"=>"34343-434"}}
+Unpermitted parameters: :format, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[36mUserRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "user_requests" ("user_id", "helper_id", "longitude", "latitude", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["helper_id", 1], ["longitude", 123.0], ["latitude", 453.0], ["device_id", "34343-434"], ["created_at", "2018-08-07 23:07:12.817703"], ["updated_at", "2018-08-07 23:07:12.817703"]]
+  ↳ app/controllers/user_requests_controller.rb:12
+  [1m[35m (116.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_requests_controller.rb:12
+Completed 201 Created in 127ms (Views: 1.1ms | ActiveRecord: 118.6ms)
+
+
