@@ -1269,3 +1269,89 @@ Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 1.5ms)
   ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
   [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "gohelp_test" ENCODING = 'utf8'[0m
   ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (47.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (33.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (314.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "helper_types" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (665.4ms)[0m  [1m[35mCREATE TABLE "helper_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (119.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "helpers" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (545.7ms)[0m  [1m[35mCREATE TABLE "helpers" ("id" bigserial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "helper_type_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (165.6ms)[0m  [1m[35mCREATE  INDEX  "index_helpers_on_helper_type_id" ON "helpers"  ("helper_type_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (33.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (450.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "user_id" integer, "name" character varying, "email" character varying, "password" character varying, "device_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (32.2ms)[0m  [1m[35mALTER TABLE "helpers" ADD CONSTRAINT "fk_rails_2493792845"
+FOREIGN KEY ("helper_type_id")
+  REFERENCES "helper_types" ("id")
+[0m
+  ↳ db/schema.rb:45
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (162.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (214.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "helper_types" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (469.2ms)[0m  [1m[35mCREATE TABLE "helper_types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (34.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "helpers" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (306.2ms)[0m  [1m[35mCREATE TABLE "helpers" ("id" bigserial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "helper_type_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (104.1ms)[0m  [1m[35mCREATE  INDEX  "index_helpers_on_helper_type_id" ON "helpers"  ("helper_type_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (35.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (395.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "user_id" integer, "name" character varying, "email" character varying, "password" character varying, "device_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (33.0ms)[0m  [1m[35mALTER TABLE "helpers" ADD CONSTRAINT "fk_rails_2493792845"
+FOREIGN KEY ("helper_type_id")
+  REFERENCES "helper_types" ("id")
+[0m
+  ↳ db/schema.rb:45
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (38.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-08-07 13:05:50.860640"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-08-07 13:05:50.905234"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
