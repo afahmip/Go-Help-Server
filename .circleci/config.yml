@@ -62,15 +62,15 @@ jobs:
                               --format progress \
                               $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
-    deploy:
-      docker:
-        - image: buildpack-deps:trusty
-      steps:
-        - checkout
-        - run:
-            name: Deploy Master to Heroku
-            command: |
-              git push https://heroku:b90ad0ee-2f41-4762-9451-7f10403f18bb@git.heroku.com/staging-gohelp.git master
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:b90ad0ee-2f41-4762-9451-7f10403f18bb@git.heroku.com/staging-gohelp.git master
 
 workflows:
   version: 2
