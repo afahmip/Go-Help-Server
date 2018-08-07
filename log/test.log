@@ -19456,3 +19456,1352 @@ Unpermitted parameter: :format
 Completed 201 Created in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (46.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (48.9ms)[0m  [1m[35mALTER TABLE "helper_types" DISABLE TRIGGER ALL;ALTER TABLE "helpers" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (41.0ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+             tablename <> 'schema_migrations'  AND tablename <> 'ar_internal_metadata'  AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (75.0ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'gohelp_test'[0m
+  [1m[35m (721.5ms)[0m  [1m[35mTRUNCATE TABLE "public"."helper_types", "public"."helpers", "public"."users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "helper_types" ENABLE TRIGGER ALL;ALTER TABLE "helpers" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (4.9ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "jenaemayert@kerluke.com"], ["password", "Faker::String"], ["phone_number", "1-503-884-4779 x305"], ["created_at", "2018-08-07 11:59:49.143914"], ["updated_at", "2018-08-07 11:59:49.143914"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "gregg@strosinmann.co"], ["password", "Faker::String"], ["phone_number", "1-352-867-5579"], ["created_at", "2018-08-07 11:59:49.151282"], ["updated_at", "2018-08-07 11:59:49.151282"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "carroll@wolff.net"], ["password", "Faker::String"], ["phone_number", "(793) 092-7944 x82089"], ["created_at", "2018-08-07 11:59:49.153328"], ["updated_at", "2018-08-07 11:59:49.153328"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "anh@champlin.name"], ["password", "Faker::String"], ["phone_number", "348.510.6625 x8468"], ["created_at", "2018-08-07 11:59:49.155269"], ["updated_at", "2018-08-07 11:59:49.155269"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "reinaldogusikowski@hickle.name"], ["password", "Faker::String"], ["phone_number", "174-804-2706 x793"], ["created_at", "2018-08-07 11:59:49.156999"], ["updated_at", "2018-08-07 11:59:49.156999"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "caridad@oberbrunnersipes.net"], ["password", "Faker::String"], ["phone_number", "(286) 579-9867"], ["created_at", "2018-08-07 11:59:49.158788"], ["updated_at", "2018-08-07 11:59:49.158788"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "ludieherman@flatley.name"], ["password", "Faker::String"], ["phone_number", "(414) 842-6022"], ["created_at", "2018-08-07 11:59:49.160568"], ["updated_at", "2018-08-07 11:59:49.160568"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "nelly@veum.co"], ["password", "Faker::String"], ["phone_number", "1-734-623-3432 x77418"], ["created_at", "2018-08-07 11:59:49.162496"], ["updated_at", "2018-08-07 11:59:49.162496"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "patricia@oharadach.name"], ["password", "Faker::String"], ["phone_number", "298-364-2983 x5729"], ["created_at", "2018-08-07 11:59:49.164576"], ["updated_at", "2018-08-07 11:59:49.164576"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "tommymcdermott@rolfson.com"], ["password", "Faker::String"], ["phone_number", "574.864.3126 x90889"], ["created_at", "2018-08-07 11:59:49.166664"], ["updated_at", "2018-08-07 11:59:49.166664"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.3ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "elinor@johnson.biz"], ["password", "Faker::String"], ["phone_number", "(938) 245-5528"], ["created_at", "2018-08-07 11:59:49.206350"], ["updated_at", "2018-08-07 11:59:49.206350"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "kylelabadie@kihnwolf.info"], ["password", "Faker::String"], ["phone_number", "(170) 787-8213 x260"], ["created_at", "2018-08-07 11:59:49.208916"], ["updated_at", "2018-08-07 11:59:49.208916"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "josiah@maggiofeeney.org"], ["password", "Faker::String"], ["phone_number", "638-041-6817 x30045"], ["created_at", "2018-08-07 11:59:49.211221"], ["updated_at", "2018-08-07 11:59:49.211221"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "alfonzoconsidine@corkerybogan.co"], ["password", "Faker::String"], ["phone_number", "172-268-8456"], ["created_at", "2018-08-07 11:59:49.213414"], ["updated_at", "2018-08-07 11:59:49.213414"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "xochitlblick@auer.io"], ["password", "Faker::String"], ["phone_number", "265.139.0551 x19328"], ["created_at", "2018-08-07 11:59:49.215859"], ["updated_at", "2018-08-07 11:59:49.215859"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "lee@oberbrunner.biz"], ["password", "Faker::String"], ["phone_number", "1-582-605-6839"], ["created_at", "2018-08-07 11:59:49.218288"], ["updated_at", "2018-08-07 11:59:49.218288"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "preston@sawayn.co"], ["password", "Faker::String"], ["phone_number", "(931) 336-6970"], ["created_at", "2018-08-07 11:59:49.220653"], ["updated_at", "2018-08-07 11:59:49.220653"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "imogenewiegand@pagac.com"], ["password", "Faker::String"], ["phone_number", "(646) 367-7151 x8680"], ["created_at", "2018-08-07 11:59:49.223109"], ["updated_at", "2018-08-07 11:59:49.223109"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "allen@kshlerin.net"], ["password", "Faker::String"], ["phone_number", "362.879.1359 x87621"], ["created_at", "2018-08-07 11:59:49.225439"], ["updated_at", "2018-08-07 11:59:49.225439"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "nathanael@hand.net"], ["password", "Faker::String"], ["phone_number", "1-649-708-7756 x07640"], ["created_at", "2018-08-07 11:59:49.227620"], ["updated_at", "2018-08-07 11:59:49.227620"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.3ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "saundra@marvin.co"], ["password", "Faker::String"], ["phone_number", "670-912-0709 x427"], ["created_at", "2018-08-07 11:59:49.238479"], ["updated_at", "2018-08-07 11:59:49.238479"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "sidney@wunsch.biz"], ["password", "Faker::String"], ["phone_number", "499.443.8261 x373"], ["created_at", "2018-08-07 11:59:49.240923"], ["updated_at", "2018-08-07 11:59:49.240923"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "keith@schroederkautzer.name"], ["password", "Faker::String"], ["phone_number", "152.280.0068 x68012"], ["created_at", "2018-08-07 11:59:49.243245"], ["updated_at", "2018-08-07 11:59:49.243245"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "lornahirthe@lemke.io"], ["password", "Faker::String"], ["phone_number", "1-573-889-8113"], ["created_at", "2018-08-07 11:59:49.245527"], ["updated_at", "2018-08-07 11:59:49.245527"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "maddie@cormier.co"], ["password", "Faker::String"], ["phone_number", "449.384.3842 x792"], ["created_at", "2018-08-07 11:59:49.247840"], ["updated_at", "2018-08-07 11:59:49.247840"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "gailcole@franecki.name"], ["password", "Faker::String"], ["phone_number", "1-495-659-9042 x7801"], ["created_at", "2018-08-07 11:59:49.250073"], ["updated_at", "2018-08-07 11:59:49.250073"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "camiebergstrom@borerkaulke.co"], ["password", "Faker::String"], ["phone_number", "1-589-308-6733"], ["created_at", "2018-08-07 11:59:49.252367"], ["updated_at", "2018-08-07 11:59:49.252367"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "boyce@johnston.co"], ["password", "Faker::String"], ["phone_number", "(710) 682-3520 x7922"], ["created_at", "2018-08-07 11:59:49.254673"], ["updated_at", "2018-08-07 11:59:49.254673"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "fredrickmcdermott@faydubuque.info"], ["password", "Faker::String"], ["phone_number", "1-993-584-6632 x845"], ["created_at", "2018-08-07 11:59:49.256898"], ["updated_at", "2018-08-07 11:59:49.256898"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "hueyprice@reinger.info"], ["password", "Faker::String"], ["phone_number", "(910) 137-8169 x68925"], ["created_at", "2018-08-07 11:59:49.259213"], ["updated_at", "2018-08-07 11:59:49.259213"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/helper/21" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mHelper Load (0.3ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (Views: 0.2ms | ActiveRecord: 6.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "cole@kub.info"], ["password", "Faker::String"], ["phone_number", "1-599-106-7375 x998"], ["created_at", "2018-08-07 11:59:49.280011"], ["updated_at", "2018-08-07 11:59:49.280011"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "vicente@haag.name"], ["password", "Faker::String"], ["phone_number", "1-355-776-8403"], ["created_at", "2018-08-07 11:59:49.282472"], ["updated_at", "2018-08-07 11:59:49.282472"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "changortiz@nader.info"], ["password", "Faker::String"], ["phone_number", "1-657-651-3200 x293"], ["created_at", "2018-08-07 11:59:49.284762"], ["updated_at", "2018-08-07 11:59:49.284762"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "waylonharris@hilllhudson.com"], ["password", "Faker::String"], ["phone_number", "920.565.4244"], ["created_at", "2018-08-07 11:59:49.287398"], ["updated_at", "2018-08-07 11:59:49.287398"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "jade@turcottestiedemann.com"], ["password", "Faker::String"], ["phone_number", "553-684-1638"], ["created_at", "2018-08-07 11:59:49.289938"], ["updated_at", "2018-08-07 11:59:49.289938"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "harriettvon@renner.com"], ["password", "Faker::String"], ["phone_number", "(246) 116-2219 x986"], ["created_at", "2018-08-07 11:59:49.292241"], ["updated_at", "2018-08-07 11:59:49.292241"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "esteban@grimes.info"], ["password", "Faker::String"], ["phone_number", "855-674-8153"], ["created_at", "2018-08-07 11:59:49.294670"], ["updated_at", "2018-08-07 11:59:49.294670"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "alfredo@towne.org"], ["password", "Faker::String"], ["phone_number", "871.968.5571"], ["created_at", "2018-08-07 11:59:49.297048"], ["updated_at", "2018-08-07 11:59:49.297048"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "isabellmitchell@jacobi.net"], ["password", "Faker::String"], ["phone_number", "853-493-8933"], ["created_at", "2018-08-07 11:59:49.299404"], ["updated_at", "2018-08-07 11:59:49.299404"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.3ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "moshe@willms.io"], ["password", "Faker::String"], ["phone_number", "1-318-481-0348 x633"], ["created_at", "2018-08-07 11:59:49.302261"], ["updated_at", "2018-08-07 11:59:49.302261"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/helper/31" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "edgardo@mcdermott.net"], ["password", "Faker::String"], ["phone_number", "789-988-2785 x1798"], ["created_at", "2018-08-07 11:59:49.309032"], ["updated_at", "2018-08-07 11:59:49.309032"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "stefaniemurphy@buckridge.name"], ["password", "Faker::String"], ["phone_number", "(432) 847-7505 x462"], ["created_at", "2018-08-07 11:59:49.310802"], ["updated_at", "2018-08-07 11:59:49.310802"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "janettagutmann@tromp.com"], ["password", "Faker::String"], ["phone_number", "(641) 424-3793 x760"], ["created_at", "2018-08-07 11:59:49.312461"], ["updated_at", "2018-08-07 11:59:49.312461"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "colbyglover@luettgen.com"], ["password", "Faker::String"], ["phone_number", "(490) 982-7204"], ["created_at", "2018-08-07 11:59:49.314078"], ["updated_at", "2018-08-07 11:59:49.314078"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "myong@strackecollier.co"], ["password", "Faker::String"], ["phone_number", "923.635.0601"], ["created_at", "2018-08-07 11:59:49.315628"], ["updated_at", "2018-08-07 11:59:49.315628"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "roselegros@kohler.name"], ["password", "Faker::String"], ["phone_number", "1-893-209-7396"], ["created_at", "2018-08-07 11:59:49.317197"], ["updated_at", "2018-08-07 11:59:49.317197"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "joesimonis@dickens.net"], ["password", "Faker::String"], ["phone_number", "465-730-6462 x1880"], ["created_at", "2018-08-07 11:59:49.318739"], ["updated_at", "2018-08-07 11:59:49.318739"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "ione@webercollier.co"], ["password", "Faker::String"], ["phone_number", "1-964-232-5852 x451"], ["created_at", "2018-08-07 11:59:49.320261"], ["updated_at", "2018-08-07 11:59:49.320261"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "carlos@schoenmcclure.biz"], ["password", "Faker::String"], ["phone_number", "(514) 925-3340 x81240"], ["created_at", "2018-08-07 11:59:49.321776"], ["updated_at", "2018-08-07 11:59:49.321776"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "zulemabogisich@mayert.biz"], ["password", "Faker::String"], ["phone_number", "1-277-049-9764 x12420"], ["created_at", "2018-08-07 11:59:49.323280"], ["updated_at", "2018-08-07 11:59:49.323280"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/helper/100" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by HelperController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mHelper Load (0.2ms)[0m  [1m[34mSELECT  "helpers".* FROM "helpers" WHERE "helpers"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "lucio@effertzwatsica.org"], ["password", "Faker::String"], ["phone_number", "944.022.7478 x460"], ["created_at", "2018-08-07 11:59:49.329467"], ["updated_at", "2018-08-07 11:59:49.329467"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "ward@swaniawskidavis.org"], ["password", "Faker::String"], ["phone_number", "1-560-105-6427"], ["created_at", "2018-08-07 11:59:49.334331"], ["updated_at", "2018-08-07 11:59:49.334331"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "renda@gleason.info"], ["password", "Faker::String"], ["phone_number", "452.623.5107"], ["created_at", "2018-08-07 11:59:49.338545"], ["updated_at", "2018-08-07 11:59:49.338545"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "filibertogleichner@steuber.info"], ["password", "Faker::String"], ["phone_number", "1-898-130-7473 x647"], ["created_at", "2018-08-07 11:59:49.342147"], ["updated_at", "2018-08-07 11:59:49.342147"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "erwin@okeefebrown.io"], ["password", "Faker::String"], ["phone_number", "(622) 934-1411"], ["created_at", "2018-08-07 11:59:49.345980"], ["updated_at", "2018-08-07 11:59:49.345980"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "jerica@stoltenberg.name"], ["password", "Faker::String"], ["phone_number", "758.971.7902"], ["created_at", "2018-08-07 11:59:49.349968"], ["updated_at", "2018-08-07 11:59:49.349968"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "lorenzo@oconner.org"], ["password", "Faker::String"], ["phone_number", "740-935-5907 x267"], ["created_at", "2018-08-07 11:59:49.353947"], ["updated_at", "2018-08-07 11:59:49.353947"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mHelper Create (0.2ms)[0m  [1m[32mINSERT INTO "helpers" ("name", "email", "password", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Faker::String"], ["email", "tynisha@walterpagac.biz"], ["password", "Faker::String"], ["phone_number", "434-554-3683 x09635"], ["created_at", "2018-08-07 11:59:49.357652"], ["updated_at", "2018-08-07 11:59:49.357652"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Cristopher McGlynn"], ["email", "ophelia@hahn.info"], ["password", "Stanley Greenholt Jr."], ["device_id", "Kimi Nicolas MD"], ["created_at", "2018-08-07 11:59:49.361498"], ["updated_at", "2018-08-07 11:59:49.361498"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Darell Bogan"], ["email", "billywalsh@parisian.com"], ["password", "Tomoko Deckow"], ["device_id", "Emerson Anderson"], ["created_at", "2018-08-07 11:59:49.363543"], ["updated_at", "2018-08-07 11:59:49.363543"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Vivien Heidenreich"], ["email", "freddie@boehm.info"], ["password", "Mr. Carmela Leuschke"], ["device_id", "Doyle Cartwright"], ["created_at", "2018-08-07 11:59:49.365493"], ["updated_at", "2018-08-07 11:59:49.365493"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Emanuel Stracke"], ["email", "ahmed@weimann.net"], ["password", "Karena Hoppe V"], ["device_id", "Earl Collins"], ["created_at", "2018-08-07 11:59:49.368308"], ["updated_at", "2018-08-07 11:59:49.368308"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Jovita Cummings"], ["email", "oie@lehnergreenholt.io"], ["password", "Abram Rippin IV"], ["device_id", "Ms. Yong Pagac"], ["created_at", "2018-08-07 11:59:49.370243"], ["updated_at", "2018-08-07 11:59:49.370243"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Otha Kerluke"], ["email", "shanell@mcclure.name"], ["password", "Gavin Jast"], ["device_id", "Mellie Stanton"], ["created_at", "2018-08-07 11:59:49.371990"], ["updated_at", "2018-08-07 11:59:49.371990"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Stephen Greenholt"], ["email", "terrancewindler@blanda.biz"], ["password", "Elli Yost DDS"], ["device_id", "Dr. Jesus Nitzsche"], ["created_at", "2018-08-07 11:59:49.373713"], ["updated_at", "2018-08-07 11:59:49.373713"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Jerri Kuhn Sr."], ["email", "jarvis@kohler.net"], ["password", "Pete Hamill"], ["device_id", "Hilton Reichert"], ["created_at", "2018-08-07 11:59:49.375369"], ["updated_at", "2018-08-07 11:59:49.375369"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Rodger Pollich"], ["email", "alonsobartell@andersoncruickshank.name"], ["password", "Guillermo Fadel"], ["device_id", "Arnold Zboncak"], ["created_at", "2018-08-07 11:59:49.377009"], ["updated_at", "2018-08-07 11:59:49.377009"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Yessenia Keebler"], ["email", "emilehintz@frami.co"], ["password", "Miss Desiree Kihn"], ["device_id", "Angelic O'Reilly"], ["created_at", "2018-08-07 11:59:49.378690"], ["updated_at", "2018-08-07 11:59:49.378690"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/_user.json.jbuilder (0.1ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.1ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/index.json.jbuilder (5.1ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Diego Johns"], ["email", "timmy@lynch.com"], ["password", "Sue O'Keefe"], ["device_id", "Ariel Halvorson DVM"], ["created_at", "2018-08-07 11:59:49.412302"], ["updated_at", "2018-08-07 11:59:49.412302"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Ulysses Bruen"], ["email", "michelarmstrong@grady.name"], ["password", "Kyung Miller"], ["device_id", "Moshe Berge"], ["created_at", "2018-08-07 11:59:49.414684"], ["updated_at", "2018-08-07 11:59:49.414684"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Trey Robel"], ["email", "treasagrimes@runte.net"], ["password", "Contessa Swift II"], ["device_id", "Mrs. Oswaldo Ritchie"], ["created_at", "2018-08-07 11:59:49.416807"], ["updated_at", "2018-08-07 11:59:49.416807"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Marni Kohler"], ["email", "sylvie@upton.name"], ["password", "Arnita Graham"], ["device_id", "Mrs. Rodrigo Sipes"], ["created_at", "2018-08-07 11:59:49.419230"], ["updated_at", "2018-08-07 11:59:49.419230"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Dr. Corliss Abshire"], ["email", "raleighwehner@flatley.name"], ["password", "Burton Schaden"], ["device_id", "Mrs. Vera Tremblay"], ["created_at", "2018-08-07 11:59:49.421216"], ["updated_at", "2018-08-07 11:59:49.421216"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Randall Corwin"], ["email", "fermindamore@beatty.io"], ["password", "Stephen Windler"], ["device_id", "Mr. Cinderella Satterfield"], ["created_at", "2018-08-07 11:59:49.423126"], ["updated_at", "2018-08-07 11:59:49.423126"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Rich Waters"], ["email", "ericklegros@barrows.org"], ["password", "Lesley Orn"], ["device_id", "Buck Feil II"], ["created_at", "2018-08-07 11:59:49.424967"], ["updated_at", "2018-08-07 11:59:49.424967"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Dr. Rachelle Connelly"], ["email", "benedict@bayer.io"], ["password", "Sherwood Heathcote"], ["device_id", "Travis Kilback"], ["created_at", "2018-08-07 11:59:49.426931"], ["updated_at", "2018-08-07 11:59:49.426931"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Nilsa Nikolaus"], ["email", "gino@kerlukekling.info"], ["password", "Charles Jacobi"], ["device_id", "Dr. Sasha Toy"], ["created_at", "2018-08-07 11:59:49.428767"], ["updated_at", "2018-08-07 11:59:49.428767"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Hilaria Feest"], ["email", "lisa@keebler.net"], ["password", "Mr. Ralph Cassin"], ["device_id", "Lynn Halvorson"], ["created_at", "2018-08-07 11:59:49.430812"], ["updated_at", "2018-08-07 11:59:49.430812"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.json.jbuilder (0.1ms)
+  Rendered users/_user.json.jbuilder (0.1ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/index.json.jbuilder (2.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Joni Ferry"], ["email", "buford@bogandamore.info"], ["password", "Dr. Craig Goyette"], ["device_id", "Ivey Bergstrom"], ["created_at", "2018-08-07 11:59:49.439463"], ["updated_at", "2018-08-07 11:59:49.439463"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Harland Green"], ["email", "seth@lindgren.org"], ["password", "Ervin Kessler DVM"], ["device_id", "Alphonso Pollich"], ["created_at", "2018-08-07 11:59:49.441435"], ["updated_at", "2018-08-07 11:59:49.441435"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Joycelyn Rice"], ["email", "mandy@emmerich.com"], ["password", "Matthew Johns II"], ["device_id", "Mrs. Josiah Moore"], ["created_at", "2018-08-07 11:59:49.443376"], ["updated_at", "2018-08-07 11:59:49.443376"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Tawana Abbott"], ["email", "jannashanahan@senger.com"], ["password", "Santiago Murray"], ["device_id", "Jeffrey Braun"], ["created_at", "2018-08-07 11:59:49.445172"], ["updated_at", "2018-08-07 11:59:49.445172"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Shon Walter"], ["email", "vadakeler@carrolldaniel.org"], ["password", "Honey Koepp"], ["device_id", "Fritz Crooks"], ["created_at", "2018-08-07 11:59:49.447058"], ["updated_at", "2018-08-07 11:59:49.447058"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Estell Howe"], ["email", "pasquale@dickens.com"], ["password", "Morgan Swift II"], ["device_id", "Domingo Ortiz"], ["created_at", "2018-08-07 11:59:49.449023"], ["updated_at", "2018-08-07 11:59:49.449023"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Davida Pfannerstill"], ["email", "domenic@kingfarrell.co"], ["password", "Riley Kuhic"], ["device_id", "Terina Glover DVM"], ["created_at", "2018-08-07 11:59:49.451065"], ["updated_at", "2018-08-07 11:59:49.451065"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Chauncey Kuvalis"], ["email", "zacharybayer@abernathy.info"], ["password", "Joaquin McLaughlin"], ["device_id", "Chi Quigley"], ["created_at", "2018-08-07 11:59:49.452853"], ["updated_at", "2018-08-07 11:59:49.452853"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Benita Brekke"], ["email", "giselanienow@bahringer.co"], ["password", "Mr. Lewis Hauck"], ["device_id", "Ms. Antonia Crona"], ["created_at", "2018-08-07 11:59:49.454621"], ["updated_at", "2018-08-07 11:59:49.454621"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Lilliana White"], ["email", "trinhpowlowski@littleankunding.net"], ["password", "Alex Vandervort"], ["device_id", "Mr. Marlys Metz"], ["created_at", "2018-08-07 11:59:49.456394"], ["updated_at", "2018-08-07 11:59:49.456394"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/100" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Tiffani Littel"], ["email", "sabinastamm@schneider.org"], ["password", "Sammy Satterfield II"], ["device_id", "Winnie Denesik"], ["created_at", "2018-08-07 11:59:49.462368"], ["updated_at", "2018-08-07 11:59:49.462368"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Lelah Rice"], ["email", "benitagorczany@hahn.org"], ["password", "Brenton Christiansen II"], ["device_id", "Yan Cremin"], ["created_at", "2018-08-07 11:59:49.464539"], ["updated_at", "2018-08-07 11:59:49.464539"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Miss Stephen Kertzmann"], ["email", "jovitalesch@heller.net"], ["password", "Marlene Harris"], ["device_id", "Coleman Gorczany"], ["created_at", "2018-08-07 11:59:49.466579"], ["updated_at", "2018-08-07 11:59:49.466579"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Deloris Witting"], ["email", "isabeldenesik@balistreri.org"], ["password", "Flora Mitchell"], ["device_id", "Marvin Gutmann"], ["created_at", "2018-08-07 11:59:49.468524"], ["updated_at", "2018-08-07 11:59:49.468524"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Enriqueta Wintheiser II"], ["email", "sharapadberg@mayert.info"], ["password", "Earl Schoen MD"], ["device_id", "Jess Nader Sr."], ["created_at", "2018-08-07 11:59:49.470384"], ["updated_at", "2018-08-07 11:59:49.470384"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Dong Huels"], ["email", "danniewaelchi@okon.info"], ["password", "Carmel Johns"], ["device_id", "Rozanne Hartmann"], ["created_at", "2018-08-07 11:59:49.472182"], ["updated_at", "2018-08-07 11:59:49.472182"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Mrs. Lawrence Corwin"], ["email", "randal@hayes.net"], ["password", "Wade O'Connell"], ["device_id", "Berry Gulgowski"], ["created_at", "2018-08-07 11:59:49.474007"], ["updated_at", "2018-08-07 11:59:49.474007"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Ms. Donald Carroll"], ["email", "wendellhoppe@hoeger.biz"], ["password", "Hong Breitenberg II"], ["device_id", "Lester Schimmel"], ["created_at", "2018-08-07 11:59:49.475768"], ["updated_at", "2018-08-07 11:59:49.475768"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Mr. Margrett Abshire"], ["email", "daron@block.org"], ["password", "Timothy Fritsch"], ["device_id", "Sebastian Legros"], ["created_at", "2018-08-07 11:59:49.477434"], ["updated_at", "2018-08-07 11:59:49.477434"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Tory Gulgowski I"], ["email", "osvaldo@gislasonborer.com"], ["password", "Lizzie Roob PhD"], ["device_id", "Dell Willms"], ["created_at", "2018-08-07 11:59:49.479189"], ["updated_at", "2018-08-07 11:59:49.479189"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 11:59:49.487650"], ["updated_at", "2018-08-07 11:59:49.487650"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/show.json.jbuilder (1.6ms)
+Completed 201 Created in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Charlie Smitham"], ["email", "lonnie@beierconsidine.net"], ["password", "Mrs. Kristofer Kihn"], ["device_id", "Luisa Abshire"], ["created_at", "2018-08-07 11:59:49.496714"], ["updated_at", "2018-08-07 11:59:49.496714"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Antonio Windler"], ["email", "reta@harris.org"], ["password", "Julio Dooley"], ["device_id", "Billie Emmerich"], ["created_at", "2018-08-07 11:59:49.498823"], ["updated_at", "2018-08-07 11:59:49.498823"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Vance Crist"], ["email", "irinarowe@weimannorn.info"], ["password", "Sarai Crist"], ["device_id", "Lacy Kuhn"], ["created_at", "2018-08-07 11:59:49.500602"], ["updated_at", "2018-08-07 11:59:49.500602"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Ela Schmidt"], ["email", "emilie@hane.co"], ["password", "Mrs. Vito Schinner"], ["device_id", "Hans Schneider"], ["created_at", "2018-08-07 11:59:49.502337"], ["updated_at", "2018-08-07 11:59:49.502337"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Mrs. Lenard Harber"], ["email", "son@shanahandaugherty.biz"], ["password", "Catheryn Boyer"], ["device_id", "Grady Murazik"], ["created_at", "2018-08-07 11:59:49.504074"], ["updated_at", "2018-08-07 11:59:49.504074"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Maryanne Schaefer"], ["email", "darwinferry@watsica.info"], ["password", "Willian Stroman"], ["device_id", "Logan Yost"], ["created_at", "2018-08-07 11:59:49.505789"], ["updated_at", "2018-08-07 11:59:49.505789"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Cleo Cummings"], ["email", "shauntesauer@tromp.biz"], ["password", "Cleveland Towne"], ["device_id", "Kareem Zulauf"], ["created_at", "2018-08-07 11:59:49.507490"], ["updated_at", "2018-08-07 11:59:49.507490"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Carmen Murazik"], ["email", "clarenceschowalter@lowe.name"], ["password", "Kayla Kuphal"], ["device_id", "Everett Reichert"], ["created_at", "2018-08-07 11:59:49.509160"], ["updated_at", "2018-08-07 11:59:49.509160"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Pattie Bogisich II"], ["email", "milfordhermann@rathveum.biz"], ["password", "Keith Kunde"], ["device_id", "Mrs. Erich Thiel"], ["created_at", "2018-08-07 11:59:49.510861"], ["updated_at", "2018-08-07 11:59:49.510861"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Mabelle Strosin"], ["email", "clarettabradtke@yundt.org"], ["password", "Ms. Noel Cole"], ["device_id", "Dina Aufderhar"], ["created_at", "2018-08-07 11:59:49.512734"], ["updated_at", "2018-08-07 11:59:49.512734"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 11:59:49.515430"], ["updated_at", "2018-08-07 11:59:49.515430"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/show.json.jbuilder (0.3ms)
+Completed 201 Created in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Basil Ziemann"], ["email", "donnie@hintz.org"], ["password", "Su Kuhic"], ["device_id", "Neville Welch"], ["created_at", "2018-08-07 11:59:49.520107"], ["updated_at", "2018-08-07 11:59:49.520107"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Sixta Reichel"], ["email", "leia@mckenzie.com"], ["password", "Vance Dare"], ["device_id", "Carroll Franecki"], ["created_at", "2018-08-07 11:59:49.522075"], ["updated_at", "2018-08-07 11:59:49.522075"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Edmund Goyette"], ["email", "stepanie@botsford.com"], ["password", "Mrs. Robbie Weber"], ["device_id", "Julian Quitzon"], ["created_at", "2018-08-07 11:59:49.523892"], ["updated_at", "2018-08-07 11:59:49.523892"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Suzie Reynolds"], ["email", "ronald@veum.org"], ["password", "Rodolfo Kris IV"], ["device_id", "Marchelle Miller"], ["created_at", "2018-08-07 11:59:49.525657"], ["updated_at", "2018-08-07 11:59:49.525657"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Willene Walker"], ["email", "fernandojohnson@bins.name"], ["password", "Rickie Reichel"], ["device_id", "Lula Osinski"], ["created_at", "2018-08-07 11:59:49.527409"], ["updated_at", "2018-08-07 11:59:49.527409"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Marcellus Cole PhD"], ["email", "zita@hartmann.io"], ["password", "Eduardo Weimann"], ["device_id", "Aldo Hermann"], ["created_at", "2018-08-07 11:59:49.529267"], ["updated_at", "2018-08-07 11:59:49.529267"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Miss Mitchell Leuschke"], ["email", "carleeturner@gaylord.net"], ["password", "Delsie Crist V"], ["device_id", "Lupe Hilll"], ["created_at", "2018-08-07 11:59:49.531183"], ["updated_at", "2018-08-07 11:59:49.531183"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Melba Erdman"], ["email", "shelia@mertz.net"], ["password", "Delois O'Hara Sr."], ["device_id", "Jesenia Cremin PhD"], ["created_at", "2018-08-07 11:59:49.533020"], ["updated_at", "2018-08-07 11:59:49.533020"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Johnny Beer"], ["email", "iac@harber.com"], ["password", "Kelley Sauer"], ["device_id", "Maybelle Ward"], ["created_at", "2018-08-07 11:59:49.534793"], ["updated_at", "2018-08-07 11:59:49.534793"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Gwendolyn Treutel II"], ["email", "dalenedare@ferrydickinson.io"], ["password", "Isreal Balistreri"], ["device_id", "Ladonna Armstrong"], ["created_at", "2018-08-07 11:59:49.536452"], ["updated_at", "2018-08-07 11:59:49.536452"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 18:59:49 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 11:59:49.538733"], ["updated_at", "2018-08-07 11:59:49.538733"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/show.json.jbuilder (0.3ms)
+Completed 201 Created in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "helper_types" DISABLE TRIGGER ALL;ALTER TABLE "helpers" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+             tablename <> 'schema_migrations'  AND tablename <> 'ar_internal_metadata'  AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (0.9ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'gohelp_test'[0m
+  [1m[35m (516.8ms)[0m  [1m[35mTRUNCATE TABLE "public"."helper_types", "public"."helpers", "public"."users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "helper_types" ENABLE TRIGGER ALL;ALTER TABLE "helpers" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Jamel Breitenberg"], ["email", "morganlemke@carroll.name"], ["password", "Arron Rowe"], ["device_id", "Booker Torp"], ["created_at", "2018-08-07 12:00:23.350663"], ["updated_at", "2018-08-07 12:00:23.350663"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Oralia Beer"], ["email", "elianaheaney@schaefer.biz"], ["password", "Belinda Keeling"], ["device_id", "Enedina O'Reilly"], ["created_at", "2018-08-07 12:00:23.352783"], ["updated_at", "2018-08-07 12:00:23.352783"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Mr. Michale Wiza"], ["email", "neildonnelly@rosenbaum.biz"], ["password", "Davis Mertz PhD"], ["device_id", "Fredrick Weber"], ["created_at", "2018-08-07 12:00:23.354601"], ["updated_at", "2018-08-07 12:00:23.354601"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Roger Turcotte"], ["email", "delindafahey@vandervort.net"], ["password", "Leila McGlynn"], ["device_id", "Ellsworth Pfeffer"], ["created_at", "2018-08-07 12:00:23.356271"], ["updated_at", "2018-08-07 12:00:23.356271"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Philip Connelly"], ["email", "patricehettinger@bergstrom.biz"], ["password", "Alfredo Hilll"], ["device_id", "Ms. Danilo Zulauf"], ["created_at", "2018-08-07 12:00:23.357908"], ["updated_at", "2018-08-07 12:00:23.357908"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Tatum Swift"], ["email", "phylisschaden@denesik.name"], ["password", "Dr. Rubye D'Amore"], ["device_id", "Clement Gorczany DDS"], ["created_at", "2018-08-07 12:00:23.359573"], ["updated_at", "2018-08-07 12:00:23.359573"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Cherilyn Donnelly"], ["email", "vaughn@powlowski.biz"], ["password", "Natalia Buckridge"], ["device_id", "Tawana Aufderhar"], ["created_at", "2018-08-07 12:00:23.362169"], ["updated_at", "2018-08-07 12:00:23.362169"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Miss France Swaniawski"], ["email", "fredrick@kub.info"], ["password", "Miss Alease Mayer"], ["device_id", "Elvera Mills"], ["created_at", "2018-08-07 12:00:23.364124"], ["updated_at", "2018-08-07 12:00:23.364124"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Xuan Buckridge IV"], ["email", "blanca@goyette.io"], ["password", "Letisha Bradtke III"], ["device_id", "Miss Kindra Howell"], ["created_at", "2018-08-07 12:00:23.365834"], ["updated_at", "2018-08-07 12:00:23.365834"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Dillon Brekke"], ["email", "charlinegrant@sauer.co"], ["password", "Prince Blick"], ["device_id", "Mellie Beier PhD"], ["created_at", "2018-08-07 12:00:23.367472"], ["updated_at", "2018-08-07 12:00:23.367472"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users" for 127.0.0.1 at 2018-08-07 19:00:23 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/index.json.jbuilder (4.5ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Alpha Reichel"], ["email", "laurindabogisich@ullrich.co"], ["password", "Minda Hilpert III"], ["device_id", "Keenan Pfannerstill"], ["created_at", "2018-08-07 12:00:23.384526"], ["updated_at", "2018-08-07 12:00:23.384526"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Jerrell Steuber"], ["email", "carollhowell@wuckert.name"], ["password", "Anna Hills"], ["device_id", "Solomon Cummerata I"], ["created_at", "2018-08-07 12:00:23.386299"], ["updated_at", "2018-08-07 12:00:23.386299"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "January Rowe"], ["email", "dreama@mckenzie.com"], ["password", "Willie Gleason Jr."], ["device_id", "Ms. Dirk Strosin"], ["created_at", "2018-08-07 12:00:23.387968"], ["updated_at", "2018-08-07 12:00:23.387968"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Jack Huel"], ["email", "ivory@larkin.com"], ["password", "Un Jakubowski"], ["device_id", "Miss Barbar Runte"], ["created_at", "2018-08-07 12:00:23.389658"], ["updated_at", "2018-08-07 12:00:23.389658"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Efren Ortiz"], ["email", "terrancegislason@davis.name"], ["password", "Ozzie Christiansen"], ["device_id", "Claud Daugherty"], ["created_at", "2018-08-07 12:00:23.391290"], ["updated_at", "2018-08-07 12:00:23.391290"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Terri Barrows"], ["email", "stuartebert@schuppe.name"], ["password", "Tommy Huels PhD"], ["device_id", "Merle Bogan"], ["created_at", "2018-08-07 12:00:23.392899"], ["updated_at", "2018-08-07 12:00:23.392899"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Katerine Veum"], ["email", "martyorn@kuvalis.biz"], ["password", "Lynn Wisoky"], ["device_id", "Isaiah Breitenberg"], ["created_at", "2018-08-07 12:00:23.394539"], ["updated_at", "2018-08-07 12:00:23.394539"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Latesha Hermiston"], ["email", "camishanahan@lesch.name"], ["password", "Miss Woodrow Carter"], ["device_id", "Frederica Casper"], ["created_at", "2018-08-07 12:00:23.396177"], ["updated_at", "2018-08-07 12:00:23.396177"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Jillian Heller"], ["email", "eunjast@danielschaefer.info"], ["password", "Drucilla Koss"], ["device_id", "Diedra Lang"], ["created_at", "2018-08-07 12:00:23.397824"], ["updated_at", "2018-08-07 12:00:23.397824"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Valentine Goyette Jr."], ["email", "maisie@schmidt.com"], ["password", "Billie Dietrich"], ["device_id", "Clint Sanford"], ["created_at", "2018-08-07 12:00:23.399447"], ["updated_at", "2018-08-07 12:00:23.399447"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users" for 127.0.0.1 at 2018-08-07 19:00:23 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.json.jbuilder (0.1ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/index.json.jbuilder (2.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Alaine Zboncak V"], ["email", "rima@weber.co"], ["password", "Donald Strosin"], ["device_id", "Rafael Kuphal"], ["created_at", "2018-08-07 12:00:23.406879"], ["updated_at", "2018-08-07 12:00:23.406879"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Ms. Anette Hudson"], ["email", "pierrehane@leffler.org"], ["password", "Arlen Mante"], ["device_id", "Mr. Eldon O'Conner"], ["created_at", "2018-08-07 12:00:23.408690"], ["updated_at", "2018-08-07 12:00:23.408690"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Lynn Anderson"], ["email", "randygutkowski@johns.com"], ["password", "Dr. Bryce Satterfield"], ["device_id", "Tyrell Renner"], ["created_at", "2018-08-07 12:00:23.410462"], ["updated_at", "2018-08-07 12:00:23.410462"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Kenda Mraz"], ["email", "phyllis@cronin.name"], ["password", "Miguelina Rath"], ["device_id", "Aurore Hand"], ["created_at", "2018-08-07 12:00:23.418757"], ["updated_at", "2018-08-07 12:00:23.418757"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Joshua Koch Sr."], ["email", "jarvis@bartoletti.net"], ["password", "Bambi Stroman I"], ["device_id", "Bobette Pfeffer"], ["created_at", "2018-08-07 12:00:23.420640"], ["updated_at", "2018-08-07 12:00:23.420640"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Reggie Hermiston"], ["email", "collinhudson@rutherford.biz"], ["password", "Colby Stiedemann"], ["device_id", "Weston Schuster"], ["created_at", "2018-08-07 12:00:23.422302"], ["updated_at", "2018-08-07 12:00:23.422302"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Myrtie Wisozk"], ["email", "lesa@marvin.io"], ["password", "Yasmine Ratke"], ["device_id", "Donald Gleichner"], ["created_at", "2018-08-07 12:00:23.423934"], ["updated_at", "2018-08-07 12:00:23.423934"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Miss Alvaro Lemke"], ["email", "reynaldo@spinka.io"], ["password", "Evelia Schumm DDS"], ["device_id", "Eldon Hoeger"], ["created_at", "2018-08-07 12:00:23.425599"], ["updated_at", "2018-08-07 12:00:23.425599"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Mrs. Reginald Herzog"], ["email", "lacresha@donnelly.name"], ["password", "Lachelle Williamson MD"], ["device_id", "Peter Hackett II"], ["created_at", "2018-08-07 12:00:23.427200"], ["updated_at", "2018-08-07 12:00:23.427200"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Chassidy Koepp"], ["email", "madalynankunding@sipes.com"], ["password", "Carl Nader"], ["device_id", "Hank Murray"], ["created_at", "2018-08-07 12:00:23.429042"], ["updated_at", "2018-08-07 12:00:23.429042"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/100" for 127.0.0.1 at 2018-08-07 19:00:23 +0700
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Benton Bins"], ["email", "rheafadel@baumbachsipes.io"], ["password", "Valentina Ferry"], ["device_id", "Stevie Toy"], ["created_at", "2018-08-07 12:00:23.435738"], ["updated_at", "2018-08-07 12:00:23.435738"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Dr. Jovan Rempel"], ["email", "illadenesik@howell.info"], ["password", "Jasper Jacobson"], ["device_id", "Melita Wisozk"], ["created_at", "2018-08-07 12:00:23.437542"], ["updated_at", "2018-08-07 12:00:23.437542"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Heath Collins"], ["email", "january@muller.info"], ["password", "Blondell Gleason"], ["device_id", "Lavonne Cremin"], ["created_at", "2018-08-07 12:00:23.439140"], ["updated_at", "2018-08-07 12:00:23.439140"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Clayton Rath"], ["email", "johnnie@kub.org"], ["password", "Gavin Bailey"], ["device_id", "Chantelle Gusikowski"], ["created_at", "2018-08-07 12:00:23.440753"], ["updated_at", "2018-08-07 12:00:23.440753"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Shakita Littel"], ["email", "althajones@abshire.info"], ["password", "Gerald Hermann"], ["device_id", "Tesha Ondricka"], ["created_at", "2018-08-07 12:00:23.442521"], ["updated_at", "2018-08-07 12:00:23.442521"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Allyson Kessler PhD"], ["email", "johnathonberge@hintz.biz"], ["password", "Ayanna Adams"], ["device_id", "Latosha Klein"], ["created_at", "2018-08-07 12:00:23.444169"], ["updated_at", "2018-08-07 12:00:23.444169"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Georgiann Davis DDS"], ["email", "carey@mantebatz.com"], ["password", "Latarsha Baumbach"], ["device_id", "Juliann Kerluke"], ["created_at", "2018-08-07 12:00:23.445865"], ["updated_at", "2018-08-07 12:00:23.445865"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Valentine Cartwright"], ["email", "rosario@zemlakrohan.io"], ["password", "Arnoldo Roberts"], ["device_id", "Hilaria Kunde"], ["created_at", "2018-08-07 12:00:23.447344"], ["updated_at", "2018-08-07 12:00:23.447344"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Mr. Rosetta Bashirian"], ["email", "carlottakaulke@lefflerrenner.co"], ["password", "Ms. Collin Sauer"], ["device_id", "Mathew Gleason"], ["created_at", "2018-08-07 12:00:23.448835"], ["updated_at", "2018-08-07 12:00:23.448835"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Celine Herzog"], ["email", "cori@runolfsdottirbartell.biz"], ["password", "Karry Franecki"], ["device_id", "Shaun Howell"], ["created_at", "2018-08-07 12:00:23.450283"], ["updated_at", "2018-08-07 12:00:23.450283"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 19:00:23 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 12:00:23.453894"], ["updated_at", "2018-08-07 12:00:23.453894"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/show.json.jbuilder (1.6ms)
+Completed 201 Created in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Aron Schmeler"], ["email", "rosy@bradtke.name"], ["password", "Ali Lang"], ["device_id", "Norma Dibbert II"], ["created_at", "2018-08-07 12:00:23.462512"], ["updated_at", "2018-08-07 12:00:23.462512"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Emory Bergnaum"], ["email", "leland@heller.com"], ["password", "Sung Watsica"], ["device_id", "Leonore Lemke III"], ["created_at", "2018-08-07 12:00:23.464391"], ["updated_at", "2018-08-07 12:00:23.464391"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Hosea Kling"], ["email", "amberlowe@davis.biz"], ["password", "Gladys Bayer"], ["device_id", "Mechelle Ryan"], ["created_at", "2018-08-07 12:00:23.466113"], ["updated_at", "2018-08-07 12:00:23.466113"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Tiera Emard"], ["email", "luisconsidine@kautzerullrich.io"], ["password", "Garland Bogan"], ["device_id", "Dalton Bins DVM"], ["created_at", "2018-08-07 12:00:23.467846"], ["updated_at", "2018-08-07 12:00:23.467846"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Harland Hamill"], ["email", "carson@stark.org"], ["password", "Carrie Graham"], ["device_id", "Hipolito Hoeger"], ["created_at", "2018-08-07 12:00:23.469572"], ["updated_at", "2018-08-07 12:00:23.469572"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Danae Runte"], ["email", "jean@dickens.biz"], ["password", "Danny Strosin"], ["device_id", "Alonzo Volkman"], ["created_at", "2018-08-07 12:00:23.471274"], ["updated_at", "2018-08-07 12:00:23.471274"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Bradley Greenfelder"], ["email", "tristan@thiel.org"], ["password", "Miss Miguel Collins"], ["device_id", "Miss Racquel Torp"], ["created_at", "2018-08-07 12:00:23.473341"], ["updated_at", "2018-08-07 12:00:23.473341"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Mora Gulgowski"], ["email", "naidadurgan@cristthiel.name"], ["password", "Donny Marquardt"], ["device_id", "Richard Bailey"], ["created_at", "2018-08-07 12:00:23.475311"], ["updated_at", "2018-08-07 12:00:23.475311"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Lorriane Spencer"], ["email", "samualkuhic@nienowshields.org"], ["password", "Vincenzo Wisozk"], ["device_id", "Anthony Schimmel"], ["created_at", "2018-08-07 12:00:23.477327"], ["updated_at", "2018-08-07 12:00:23.477327"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Johanna Nienow"], ["email", "seanpagac@bednar.biz"], ["password", "Joshua Gerhold"], ["device_id", "Dan Brakus"], ["created_at", "2018-08-07 12:00:23.479333"], ["updated_at", "2018-08-07 12:00:23.479333"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 19:00:23 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 12:00:23.481945"], ["updated_at", "2018-08-07 12:00:23.481945"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/show.json.jbuilder (0.3ms)
+Completed 201 Created in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Mr. Dudley Strosin"], ["email", "valentinecollier@bradtke.io"], ["password", "Troy Nader DVM"], ["device_id", "Mickey Waelchi"], ["created_at", "2018-08-07 12:00:23.486771"], ["updated_at", "2018-08-07 12:00:23.486771"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Miss Pia Hilpert"], ["email", "jacquie@fadeljohns.biz"], ["password", "Mr. Kiana Ankunding"], ["device_id", "Alyssa Kessler PhD"], ["created_at", "2018-08-07 12:00:23.488563"], ["updated_at", "2018-08-07 12:00:23.488563"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Kiara Roob II"], ["email", "teresehowell@deckowkeebler.biz"], ["password", "Paz Davis II"], ["device_id", "Terrilyn Skiles"], ["created_at", "2018-08-07 12:00:23.490546"], ["updated_at", "2018-08-07 12:00:23.490546"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Modesto Denesik"], ["email", "trinhspinka@kautzer.org"], ["password", "Loren Erdman"], ["device_id", "Enoch Daugherty"], ["created_at", "2018-08-07 12:00:23.492276"], ["updated_at", "2018-08-07 12:00:23.492276"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Susanna Nitzsche"], ["email", "madelenewalsh@hammes.biz"], ["password", "Joesph Gibson"], ["device_id", "Loren Rippin"], ["created_at", "2018-08-07 12:00:23.494080"], ["updated_at", "2018-08-07 12:00:23.494080"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Miss Love Howell"], ["email", "linnie@spencer.io"], ["password", "Tonie Armstrong"], ["device_id", "Ewa Dietrich"], ["created_at", "2018-08-07 12:00:23.495865"], ["updated_at", "2018-08-07 12:00:23.495865"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Sherice Murazik"], ["email", "darrick@kihnrempel.co"], ["password", "Evonne Witting"], ["device_id", "Brianne Daugherty II"], ["created_at", "2018-08-07 12:00:23.497581"], ["updated_at", "2018-08-07 12:00:23.497581"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Belle Vandervort II"], ["email", "ailene@pouros.co"], ["password", "Flor Stehr"], ["device_id", "Vito Lemke"], ["created_at", "2018-08-07 12:00:23.499284"], ["updated_at", "2018-08-07 12:00:23.499284"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Waltraud Barton"], ["email", "ollie@zulaufjohnston.info"], ["password", "America Zemlak DVM"], ["device_id", "Leticia Borer"], ["created_at", "2018-08-07 12:00:23.501032"], ["updated_at", "2018-08-07 12:00:23.501032"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Gaylene Blanda"], ["email", "lulu@lind.org"], ["password", "Edison Doyle"], ["device_id", "Ed Abernathy"], ["created_at", "2018-08-07 12:00:23.502891"], ["updated_at", "2018-08-07 12:00:23.502891"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 19:00:23 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 12:00:23.505552"], ["updated_at", "2018-08-07 12:00:23.505552"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/show.json.jbuilder (0.3ms)
+Completed 201 Created in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "helper_types" DISABLE TRIGGER ALL;ALTER TABLE "helpers" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+             tablename <> 'schema_migrations'  AND tablename <> 'ar_internal_metadata'  AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (0.7ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'gohelp_test'[0m
+  [1m[35m (484.7ms)[0m  [1m[35mTRUNCATE TABLE "public"."helper_types", "public"."helpers", "public"."users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "helper_types" ENABLE TRIGGER ALL;ALTER TABLE "helpers" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Alida Von IV"], ["email", "demarcusklein@johnston.name"], ["password", "Bertha Tremblay"], ["device_id", "Marco Windler"], ["created_at", "2018-08-07 12:00:56.430720"], ["updated_at", "2018-08-07 12:00:56.430720"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Efrain Wehner"], ["email", "everett@konopelski.co"], ["password", "Keiko Kemmer II"], ["device_id", "Mr. Merlin Buckridge"], ["created_at", "2018-08-07 12:00:56.432942"], ["updated_at", "2018-08-07 12:00:56.432942"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Dallas McGlynn"], ["email", "nga@emardadams.org"], ["password", "Earnest Klocko"], ["device_id", "Doug Corkery Sr."], ["created_at", "2018-08-07 12:00:56.434704"], ["updated_at", "2018-08-07 12:00:56.434704"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Georgetta Jakubowski"], ["email", "borisleuschke@reichel.net"], ["password", "Leon Ruecker"], ["device_id", "Mrs. Starr Schulist"], ["created_at", "2018-08-07 12:00:56.436410"], ["updated_at", "2018-08-07 12:00:56.436410"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Williemae Bergstrom"], ["email", "miyoko@cole.io"], ["password", "Xiao Mann"], ["device_id", "Ms. Yoko Lockman"], ["created_at", "2018-08-07 12:00:56.438123"], ["updated_at", "2018-08-07 12:00:56.438123"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Jesica O'Hara"], ["email", "siobhanskiles@hayechinner.io"], ["password", "Freddy Greenholt"], ["device_id", "Corrie Oberbrunner"], ["created_at", "2018-08-07 12:00:56.439820"], ["updated_at", "2018-08-07 12:00:56.439820"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Patrina Little Sr."], ["email", "nicholasmoriette@okuneva.org"], ["password", "Dolly McCullough"], ["device_id", "Rozella Stroman Jr."], ["created_at", "2018-08-07 12:00:56.441671"], ["updated_at", "2018-08-07 12:00:56.441671"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Lindsay Lynch"], ["email", "odelia@medhurst.net"], ["password", "Graig Braun"], ["device_id", "Dell Buckridge"], ["created_at", "2018-08-07 12:00:56.443501"], ["updated_at", "2018-08-07 12:00:56.443501"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Krista Quitzon"], ["email", "donette@shields.info"], ["password", "Michal Rutherford IV"], ["device_id", "Ms. Alba VonRueden"], ["created_at", "2018-08-07 12:00:56.445372"], ["updated_at", "2018-08-07 12:00:56.445372"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Mrs. Mack Okuneva"], ["email", "isiah@shields.name"], ["password", "Alberto Howe"], ["device_id", "Lee Cronin Sr."], ["created_at", "2018-08-07 12:00:56.447228"], ["updated_at", "2018-08-07 12:00:56.447228"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users" for 127.0.0.1 at 2018-08-07 19:00:56 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/index.json.jbuilder (4.5ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Jaquelyn Bartell DDS"], ["email", "alesha@tillman.com"], ["password", "Murray Marquardt"], ["device_id", "Sheldon Bins III"], ["created_at", "2018-08-07 12:00:56.465154"], ["updated_at", "2018-08-07 12:00:56.465154"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Mrs. Celestina Barton"], ["email", "ramonjacobson@daughertyheathcote.org"], ["password", "John Ward"], ["device_id", "Alvaro Blick"], ["created_at", "2018-08-07 12:00:56.467014"], ["updated_at", "2018-08-07 12:00:56.467014"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Maren McClure"], ["email", "berry@cartwright.io"], ["password", "Antione Robel"], ["device_id", "Cedrick Hessel"], ["created_at", "2018-08-07 12:00:56.468728"], ["updated_at", "2018-08-07 12:00:56.468728"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Sergio Ullrich III"], ["email", "bridget@kovacek.co"], ["password", "Olivia Bechtelar"], ["device_id", "Logan Veum"], ["created_at", "2018-08-07 12:00:56.470431"], ["updated_at", "2018-08-07 12:00:56.470431"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Hector Langworth"], ["email", "daciagerlach@runolfonreichert.net"], ["password", "Qiana Glover"], ["device_id", "Deb Romaguera"], ["created_at", "2018-08-07 12:00:56.472101"], ["updated_at", "2018-08-07 12:00:56.472101"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Rosena DuBuque"], ["email", "juliankuhlman@senger.co"], ["password", "Ronni Kuhic"], ["device_id", "Phil Kemmer"], ["created_at", "2018-08-07 12:00:56.473674"], ["updated_at", "2018-08-07 12:00:56.473674"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Ms. Elza Von"], ["email", "rivabergstrom@stromangusikowski.co"], ["password", "Carlo Jakubowski"], ["device_id", "Yon Ondricka III"], ["created_at", "2018-08-07 12:00:56.475384"], ["updated_at", "2018-08-07 12:00:56.475384"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Dr. Kraig Barrows"], ["email", "quentin@shanahan.info"], ["password", "Colton Pacocha"], ["device_id", "Jolie Wuckert"], ["created_at", "2018-08-07 12:00:56.477083"], ["updated_at", "2018-08-07 12:00:56.477083"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Danika Jenkins"], ["email", "lilia@keler.com"], ["password", "Evita Dietrich II"], ["device_id", "Gia Lockman"], ["created_at", "2018-08-07 12:00:56.478888"], ["updated_at", "2018-08-07 12:00:56.478888"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Derek Boehm"], ["email", "markusdavis@olson.org"], ["password", "Eryn Conn"], ["device_id", "Olivia Parker"], ["created_at", "2018-08-07 12:00:56.480573"], ["updated_at", "2018-08-07 12:00:56.480573"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users" for 127.0.0.1 at 2018-08-07 19:00:56 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/index.json.jbuilder (2.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Derick Rutherford III"], ["email", "ella@schneider.com"], ["password", "Miss Terresa Stroman"], ["device_id", "Shawana Johnson I"], ["created_at", "2018-08-07 12:00:56.488044"], ["updated_at", "2018-08-07 12:00:56.488044"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Jody Hegmann"], ["email", "jc@kulas.com"], ["password", "Mr. Aurelio Nikolaus"], ["device_id", "Divina Moen PhD"], ["created_at", "2018-08-07 12:00:56.489983"], ["updated_at", "2018-08-07 12:00:56.489983"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Dr. Sierra Abshire"], ["email", "giovanni@bechtelar.biz"], ["password", "Tawna Graham"], ["device_id", "Sabina Nitzsche"], ["created_at", "2018-08-07 12:00:56.491873"], ["updated_at", "2018-08-07 12:00:56.491873"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Daysi Ondricka"], ["email", "beverleemiller@lind.io"], ["password", "Jeannetta Williamson"], ["device_id", "Miss Delmer Zboncak"], ["created_at", "2018-08-07 12:00:56.493641"], ["updated_at", "2018-08-07 12:00:56.493641"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Sylvester Zulauf"], ["email", "regenaruecker@gutmann.info"], ["password", "Cassey Will"], ["device_id", "Wilbur Cassin"], ["created_at", "2018-08-07 12:00:56.495313"], ["updated_at", "2018-08-07 12:00:56.495313"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Eartha Schumm II"], ["email", "garth@greendoyle.com"], ["password", "Jerrold Harber"], ["device_id", "Lia Zulauf"], ["created_at", "2018-08-07 12:00:56.496994"], ["updated_at", "2018-08-07 12:00:56.496994"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Evelin McDermott"], ["email", "robbyokeefe@morarleffler.com"], ["password", "Fidel Doyle"], ["device_id", "Miss Russell McClure"], ["created_at", "2018-08-07 12:00:56.498695"], ["updated_at", "2018-08-07 12:00:56.498695"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Mrs. Judi Wiza"], ["email", "ulyesboyer@schaefer.com"], ["password", "Mr. Otha Koss"], ["device_id", "Fredia Armstrong"], ["created_at", "2018-08-07 12:00:56.500422"], ["updated_at", "2018-08-07 12:00:56.500422"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Jocelyn Kirlin"], ["email", "ronny@wuckertwitting.co"], ["password", "Vincenza Mueller III"], ["device_id", "Bridget Lehner DVM"], ["created_at", "2018-08-07 12:00:56.502093"], ["updated_at", "2018-08-07 12:00:56.502093"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Ronny Ward"], ["email", "keturah@wuckert.co"], ["password", "Yen Brakus"], ["device_id", "Nathanial Robel"], ["created_at", "2018-08-07 12:00:56.503760"], ["updated_at", "2018-08-07 12:00:56.503760"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/users/100" for 127.0.0.1 at 2018-08-07 19:00:56 +0700
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Drew Koepp"], ["email", "rileykris@legrochumm.org"], ["password", "Vincenza Stoltenberg"], ["device_id", "Wilbur McLaughlin"], ["created_at", "2018-08-07 12:00:56.510720"], ["updated_at", "2018-08-07 12:00:56.510720"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Wyatt Schowalter"], ["email", "gerardschuppe@glover.org"], ["password", "Katheleen Kovacek"], ["device_id", "Ms. Yolande Leffler"], ["created_at", "2018-08-07 12:00:56.512460"], ["updated_at", "2018-08-07 12:00:56.512460"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Frank King"], ["email", "kenton@treutel.io"], ["password", "Donita Marquardt Sr."], ["device_id", "Mona Cole V"], ["created_at", "2018-08-07 12:00:56.514166"], ["updated_at", "2018-08-07 12:00:56.514166"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Efrain Pacocha"], ["email", "jee@hettingertreutel.co"], ["password", "Jerald Adams DDS"], ["device_id", "Miss Sabina Mitchell"], ["created_at", "2018-08-07 12:00:56.515918"], ["updated_at", "2018-08-07 12:00:56.515918"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Lexie Kozey"], ["email", "errolpacocha@zulauf.io"], ["password", "Miss Tomoko Pfeffer"], ["device_id", "Shaunna Johnston DDS"], ["created_at", "2018-08-07 12:00:56.524189"], ["updated_at", "2018-08-07 12:00:56.524189"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Joi O'Kon"], ["email", "josephrenner@ledner.info"], ["password", "Dannie West"], ["device_id", "Ngoc Dickinson"], ["created_at", "2018-08-07 12:00:56.526179"], ["updated_at", "2018-08-07 12:00:56.526179"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Cassaundra Deckow"], ["email", "rochel@veum.com"], ["password", "Evonne Kuhn"], ["device_id", "Emil Rice II"], ["created_at", "2018-08-07 12:00:56.528040"], ["updated_at", "2018-08-07 12:00:56.528040"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Robin Steuber"], ["email", "monty@hickle.biz"], ["password", "Dr. Dann Dooley"], ["device_id", "Napoleon Reinger"], ["created_at", "2018-08-07 12:00:56.529874"], ["updated_at", "2018-08-07 12:00:56.529874"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Victor Ryan"], ["email", "arliepagac@jerde.org"], ["password", "Chun Hessel Jr."], ["device_id", "Solomon Braun"], ["created_at", "2018-08-07 12:00:56.531631"], ["updated_at", "2018-08-07 12:00:56.531631"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Luanna Windler"], ["email", "jerome@mcclurebauch.net"], ["password", "Ms. William Muller"], ["device_id", "Gus Bruen Jr."], ["created_at", "2018-08-07 12:00:56.533401"], ["updated_at", "2018-08-07 12:00:56.533401"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 19:00:56 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 12:00:56.537240"], ["updated_at", "2018-08-07 12:00:56.537240"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/show.json.jbuilder (1.6ms)
+Completed 201 Created in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Kirstie Botsford PhD"], ["email", "leora@cole.name"], ["password", "Emmanuel Feeney DDS"], ["device_id", "Kyoko Reynolds"], ["created_at", "2018-08-07 12:00:56.546220"], ["updated_at", "2018-08-07 12:00:56.546220"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["name", "Miss Lanora Wisozk"], ["email", "nell@franecki.io"], ["password", "Dana Schulist"], ["device_id", "Troy Gusikowski"], ["created_at", "2018-08-07 12:00:56.548150"], ["updated_at", "2018-08-07 12:00:56.548150"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 5], ["name", "Louie McKenzie"], ["email", "cristi@herman.net"], ["password", "Carl Rippin II"], ["device_id", "Venetta Reichel"], ["created_at", "2018-08-07 12:00:56.549863"], ["updated_at", "2018-08-07 12:00:56.549863"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bruno Mayert"], ["email", "chung@reichert.co"], ["password", "Teodoro Robel Sr."], ["device_id", "Adelina Breitenberg"], ["created_at", "2018-08-07 12:00:56.551508"], ["updated_at", "2018-08-07 12:00:56.551508"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 3], ["name", "Yee Murray"], ["email", "maria@vonruedenblock.com"], ["password", "Normand Wunsch"], ["device_id", "Dr. Gustavo Hilpert"], ["created_at", "2018-08-07 12:00:56.553217"], ["updated_at", "2018-08-07 12:00:56.553217"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Mr. Crysta Borer"], ["email", "rexoreilly@mayeroconnell.info"], ["password", "Wendy Pagac"], ["device_id", "Danielle Glover"], ["created_at", "2018-08-07 12:00:56.555031"], ["updated_at", "2018-08-07 12:00:56.555031"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Dede Fadel"], ["email", "kayleewilliamson@crooks.biz"], ["password", "Carole Klocko I"], ["device_id", "Tisha Turner"], ["created_at", "2018-08-07 12:00:56.556792"], ["updated_at", "2018-08-07 12:00:56.556792"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Rosanne Walsh"], ["email", "stevenlittel@runolfsdottirhackett.info"], ["password", "Jermaine DuBuque"], ["device_id", "Ms. Tommie Harber"], ["created_at", "2018-08-07 12:00:56.558604"], ["updated_at", "2018-08-07 12:00:56.558604"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Chauncey Marks"], ["email", "alonzo@bartoletti.net"], ["password", "Jasper Mante"], ["device_id", "Austin Wuckert IV"], ["created_at", "2018-08-07 12:00:56.560470"], ["updated_at", "2018-08-07 12:00:56.560470"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Amado Boehm"], ["email", "claud@ziemecollins.co"], ["password", "Jan Gulgowski"], ["device_id", "Jarred D'Amore"], ["created_at", "2018-08-07 12:00:56.562159"], ["updated_at", "2018-08-07 12:00:56.562159"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 19:00:56 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 12:00:56.564536"], ["updated_at", "2018-08-07 12:00:56.564536"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/show.json.jbuilder (0.3ms)
+Completed 201 Created in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 0], ["name", "Brendon Moore"], ["email", "long@hermann.org"], ["password", "Odessa Reinger"], ["device_id", "Mark Turner"], ["created_at", "2018-08-07 12:00:56.568419"], ["updated_at", "2018-08-07 12:00:56.568419"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Ms. Richie O'Reilly"], ["email", "dong@bergstrom.org"], ["password", "Evan Kessler"], ["device_id", "Paul Rice"], ["created_at", "2018-08-07 12:00:56.570080"], ["updated_at", "2018-08-07 12:00:56.570080"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Laureen Klein"], ["email", "julesrutherford@abbott.io"], ["password", "Suellen Gorczany"], ["device_id", "Oralia Murray IV"], ["created_at", "2018-08-07 12:00:56.571745"], ["updated_at", "2018-08-07 12:00:56.571745"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Lucinda Jakubowski"], ["email", "donaldstoltenberg@zulauf.org"], ["password", "Izola Koch II"], ["device_id", "Marcie Kunze"], ["created_at", "2018-08-07 12:00:56.573470"], ["updated_at", "2018-08-07 12:00:56.573470"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 6], ["name", "Fannie Blanda"], ["email", "coral@moore.net"], ["password", "Clement Lang"], ["device_id", "Alfonso Kautzer II"], ["created_at", "2018-08-07 12:00:56.575245"], ["updated_at", "2018-08-07 12:00:56.575245"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 8], ["name", "Gino Bechtelar"], ["email", "latasha@kuhlman.io"], ["password", "Colton Quitzon"], ["device_id", "Harry Nitzsche"], ["created_at", "2018-08-07 12:00:56.576964"], ["updated_at", "2018-08-07 12:00:56.576964"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 7], ["name", "Maire Dietrich"], ["email", "quinn@darewisozk.net"], ["password", "Chelsey Prohaska"], ["device_id", "Signe Durgan"], ["created_at", "2018-08-07 12:00:56.578713"], ["updated_at", "2018-08-07 12:00:56.578713"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 2], ["name", "Dr. Nigel Gerlach"], ["email", "calandra@borerheathcote.biz"], ["password", "Dr. Arthur Deckow"], ["device_id", "Art Murphy"], ["created_at", "2018-08-07 12:00:56.580451"], ["updated_at", "2018-08-07 12:00:56.580451"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 9], ["name", "Petrina Franecki DDS"], ["email", "juliusboehm@kemmer.info"], ["password", "Mrs. Joann Mertz"], ["device_id", "Eliseo Beahan"], ["created_at", "2018-08-07 12:00:56.582155"], ["updated_at", "2018-08-07 12:00:56.582155"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Daina Klein"], ["email", "houston@schumm.io"], ["password", "Michaela Fisher"], ["device_id", "Kenia Weber"], ["created_at", "2018-08-07 12:00:56.583843"], ["updated_at", "2018-08-07 12:00:56.583843"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/users" for 127.0.0.1 at 2018-08-07 19:00:56 +0700
+Processing by UsersController#create as JSON
+  Parameters: {"user_id"=>"1", "name"=>"Bandung", "email"=>"test@yahoo.com", "password"=>"[FILTERED]", "device_id"=>"abc12345"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_id", "name", "email", "password", "device_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "Bandung"], ["email", "test@yahoo.com"], ["password", "lorem"], ["device_id", "abc12345"], ["created_at", "2018-08-07 12:00:56.586394"], ["updated_at", "2018-08-07 12:00:56.586394"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  Rendering users/show.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.0ms)
+  Rendered users/show.json.jbuilder (0.3ms)
+Completed 201 Created in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
