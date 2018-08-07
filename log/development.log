@@ -1231,3 +1231,37 @@ Processing by HelperTypesController#show as JSON
 Completed 200 OK in 107ms (Views: 1.1ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-06 19:10:39 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/fahmi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/fahmi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 17ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-08-06 19:10:42 +0700
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (8.4ms)
+Completed 200 OK in 28ms (Views: 12.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/helper_types" for 127.0.0.1 at 2018-08-06 19:10:46 +0700
+Processing by HelperTypesController#index as JSON
+  [1m[36mHelperType Load (1.0ms)[0m  [1m[34mSELECT "helper_types".* FROM "helper_types"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 32ms (Views: 17.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/helper" for 127.0.0.1 at 2018-08-07 18:42:34 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HelperController#index as JSON
+  [1m[36mHelper Load (0.4ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 1.5ms)
+
+
