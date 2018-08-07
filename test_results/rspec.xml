@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="12" skipped="0" failures="0" errors="0" time="1.307539" timestamp="2018-08-07T19:50:49+07:00" hostname="fahmi-pc">
+<properties>
+<property name="seed" value="44446"/>
+</properties>
+<testcase classname="spec.models.helper_type_spec" name="HelperType should validate that :name cannot be empty/falsy" file="./spec/models/helper_type_spec.rb" time="0.105672"></testcase>
+<testcase classname="spec.models.user_spec" name="User attributes should have attributes user_id" file="./spec/models/user_spec.rb" time="0.008293"></testcase>
+<testcase classname="spec.models.user_spec" name="User attributes should have attributes name" file="./spec/models/user_spec.rb" time="0.001519"></testcase>
+<testcase classname="spec.models.user_spec" name="User attributes should have attributes email" file="./spec/models/user_spec.rb" time="0.001393"></testcase>
+<testcase classname="spec.models.user_spec" name="User attributes should have attributes password" file="./spec/models/user_spec.rb" time="0.001256"></testcase>
+<testcase classname="spec.models.user_spec" name="User attributes should have attributes device_id" file="./spec/models/user_spec.rb" time="0.001007"></testcase>
+<testcase classname="spec.requests.users_spec" name="Users API GET /users returns users" file="./spec/requests/users_spec.rb" time="0.065306"></testcase>
+<testcase classname="spec.requests.users_spec" name="Users API GET /users returns status code 200" file="./spec/requests/users_spec.rb" time="0.024599"></testcase>
+<testcase classname="spec.requests.users_spec" name="Users API GET /users/:id when the record does not exist returns status code 404" file="./spec/requests/users_spec.rb" time="0.023794"></testcase>
+<testcase classname="spec.requests.users_spec" name="Users API POST /users when the request is valid creates a user" file="./spec/requests/users_spec.rb" time="0.029112"></testcase>
+<testcase classname="spec.requests.users_spec" name="Users API POST /users when the request is valid returns status code 201" file="./spec/requests/users_spec.rb" time="0.024791"></testcase>
+<testcase classname="spec.requests.users_spec" name="Users API POST /users when the request is valid returns a validation failure message" file="./spec/requests/users_spec.rb" time="0.022645"></testcase>
+</testsuite>

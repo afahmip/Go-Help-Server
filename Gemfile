@@ -7,6 +7,8 @@ ruby '2.5.1'
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+gem 'rspec_junit_formatter'
+gem 'rspec-core'
 # Postgres
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

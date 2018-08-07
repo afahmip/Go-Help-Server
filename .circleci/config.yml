@@ -1,69 +1,59 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
 version: 2
 jobs:
   build:
-    docker: # run the steps with Docker
-      - image: circleci/ruby:2.5.1-node-browsers # ...with this image as the primary container; this is where all `steps` will run
-        environment: # environment variables for primary container
+    parallelism: 3
+    working_directory: ~/media/fahmi/DATA/Internship/Compfest/Academy/finalproject/Go-Help-Server
+    docker:
+      - image: circleci/ruby:2.5.1-stretch-node-browsers
+        environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           PGHOST: 127.0.0.1
-          PGUSER: fahmi
+          PGUSER: circleci-demo-ruby
           RAILS_ENV: test
-      - image: circleci/postgres:9.5-alpine # database image
-        environment: # environment variables for database
+      - image: circleci/postgres:9.5-alpine
+        environment:
           POSTGRES_USER: fahmi
           POSTGRES_DB: gohelp_development
-          POSTGRES_PASSWORD: ""
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
-    working_directory: ~/repo
 
     steps:
       - checkout
 
-      # Download and cache dependencies
+      # Which version of bundler?
+      - run:
+          name: Which bundler?
+          command: bundle -v
+
+      # Restore bundle cache
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - Go-Help-Server-v1-{{ checksum "Gemfile.lock" }}
+            - Go-Help-Server-v1-
 
       - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+          name: Bundle Install
+          command: bundle check || bundle install
 
+      # Store bundle cache
       - save_cache:
+          key: Go-Help-Server-v1-{{ checksum "Gemfile.lock" }}
           paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - vendor/bundle
 
-      # Database setup
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
-
-      # run tests!
       - run:
-          name: run tests
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Database setup
+          command: bin/rails db:schema:load --trace
+
+      - run:
+          name: Run rspec in parallel
           command: |
             bundle exec rspec --profile 10 \
                               --format RspecJunitFormatter \
                               --out test_results/rspec.xml \
                               --format progress \
                               $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
-
-      # collect reports
-      - store_test_results:
-          path: /tmp/test-results
-      - store_artifacts:
-          path: /tmp/test-results
-          destination: test-results
