@@ -44,7 +44,7 @@ RSpec.describe "UserRequests API", type: :request do
     let(:valid_attributes) {
       {
           user_id: '1',
-          helper_id: '1',
+          helper_type_id: '1',
           device_id: '34343-434',
           longitude: '123.4253167',
           latitude: '453.2341523'
