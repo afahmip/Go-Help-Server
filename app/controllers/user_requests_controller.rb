@@ -1,4 +1,9 @@
+require_relative 'helpers/distance_helper'
+require_relative 'helpers/notification_helper'
+
 class UserRequestsController < ApplicationController
+  include DistanceHelper, NotificationHelper
+
   before_action :set_user_request, only: [:show, :update, :destroy]
 
   # GET /user_requests
@@ -10,6 +15,11 @@ class UserRequestsController < ApplicationController
   # POST /user_requests
   def create
     @user_request = UserRequest.create!(user_request_params)
+    @helpers = Helper.all
+
+    @helpers.each { |helper|
+      NotificationHelper.push_notification(helper.device_id)
+    }
     json_response(@user_request, :created)
   end
 
@@ -37,37 +47,19 @@ class UserRequestsController < ApplicationController
 
     @user_requests.each { |request|
       if request.helper_type_id == params[:helper_type_id]
-        location_user = init_location(request.latitude, request.longitude)
-        location_helper = init_location(params[:latitude].to_f, params[:longitude].to_f)
-        puts distance(location_user, location_helper)
-        @result.push(request)
+        location_user = DistanceHelper::init_location(request.latitude, request.longitude)
+        location_helper = DistanceHelper::init_location(params[:latitude].to_f, params[:longitude].to_f)
+        distance_between = DistanceHelper::get_distance(location_user, location_helper)
+
+        if DistanceHelper::is_helper_close_to_user(distance_between)
+          @result.push(request)
+        end
       end
     }
     json_response(@result)
   end
 
   private
-
-  def init_location(lat, lon)
-    [lat, lon]
-  end
-
-  def distance (loc1, loc2)
-    rad_per_deg = Math::PI/180  # PI / 180
-    rkm = 6371                  # Earth radius in kilometers
-    rm = rkm * 1000             # Radius in meters
-
-    dlat_rad = (loc2[0]-loc1[0]) * rad_per_deg  # Delta, converted to rad
-    dlon_rad = (loc2[1]-loc1[1]) * rad_per_deg
-
-    lat1_rad, lon1_rad = loc1.map {|i| i * rad_per_deg }
-    lat2_rad, lon2_rad = loc2.map {|i| i * rad_per_deg }
-
-    a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2
-    c = 2 * Math::atan2(Math::sqrt(a), Math::sqrt(1-a))
-
-    rm * c # Delta in meters
-  end
 
   def user_request_params
     params.permit(:user_id, :helper_type_id, :longitude, :latitude, :device_id)

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     post '/' => 'user_requests#filter_request'
   end
 
+  scope '/update_helper_location' do
+    post '/:id' => 'helper#update_location'
+  end
+
   # scope '/api' do
   #   scope '/v1' do
   #     scope '/projects' do

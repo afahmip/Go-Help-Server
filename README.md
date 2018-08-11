@@ -21,6 +21,38 @@ This part is the API that supports the application on both User and Helper side.
 	 | device_id | string | User device ID (Android) |  
   
 ---  
+## Helper    
+### Create new Helper    
+ - URL:  `/helper`
+ - Method: `POST` 
+ - Headers: `Content-Type: application/json`  
+ - Body    
+  
+	 | Field | Type | Description |    
+	 | ----- | ---- | ----------- |  
+	 | name | string | Helper name |  
+	 | email | string | Helper email |  
+	 | password | string | Helper password |  
+	 | phone_number | string | Helper phone number |
+	 | helper_type_id | integer | Helper type |
+
+### Retrieve all Helper    
+ - URL:  `/helper`
+ - Method: `GET` 
+ - Headers: `Content-Type: application/json`  
+
+### Update Helper location   
+ - URL:  `/update_helper_location/<id:integer>`
+ - Method: `POST` 
+ - Headers: `Content-Type: application/json`  
+ - Body    
+  
+	 | Field | Type | Description |    
+	 | ----- | ---- | ----------- |  
+	 | longitude | float | Helper longitude coordinate |
+	 | latitude | float | Helper latitude coordinate |
+
+---  
 ## UserRequest    
 ### Create new UserRequest    
  - URL:  `/user_requests` 
@@ -36,7 +68,7 @@ This part is the API that supports the application on both User and Helper side.
 	 | latitude | float | User's latitude coordinate |  
 	 | device_id | string | User device ID (Android) |  
   
-### Filter UserRequest    
+### Filter UserRequest based on Helper location and type
  - URL:  `/retrieve_request` 
  - Method: `POST` 
  - Headers: `Content-Type: application/json`  

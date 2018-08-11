@@ -1,8 +1,15 @@
-module UserRequestHelper
-  def distance (loc1, loc2)
+module DistanceHelper
+
+  EARTH_RADIUS = 6371
+  DISTANCE_LIMIT = 5000.0
+
+  def DistanceHelper.init_location(lat, lon)
+    [lat, lon]
+  end
+
+  def DistanceHelper.get_distance(loc1, loc2)
     rad_per_deg = Math::PI/180  # PI / 180
-    rkm = 6371                  # Earth radius in kilometers
-    rm = rkm * 1000             # Radius in meters
+    rm = EARTH_RADIUS * 1000    # Radius in meters
 
     dlat_rad = (loc2[0]-loc1[0]) * rad_per_deg  # Delta, converted to rad
     dlon_rad = (loc2[1]-loc1[1]) * rad_per_deg
@@ -15,4 +22,9 @@ module UserRequestHelper
 
     rm * c # Delta in meters
   end
+
+  def DistanceHelper.is_helper_close_to_user(distance)
+    distance <= DISTANCE_LIMIT
+  end
+
 end

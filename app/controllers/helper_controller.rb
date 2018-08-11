@@ -1,5 +1,5 @@
 class HelperController < ApplicationController
-  before_action :set_helper, only: [:show, :update, :destroy]
+  before_action :set_helper, only: [:show, :update, :destroy, :update_location]
 
   # GET /helper
   def index
@@ -27,6 +27,12 @@ class HelperController < ApplicationController
     head :no_content
   end
 
+  # POST /update_helper_location
+  def update_location
+    @helper.update(location_params)
+    head :no_content
+  end
+
   # DELETE /helper/:id
   def destroy
     @helper.destroy
@@ -35,8 +41,12 @@ class HelperController < ApplicationController
 
   private
 
+  def location_params
+    params.permit(:longitude, :latitude)
+  end
+
   def helper_params
-    params.permit(:name, :email, :password, :phone_number, :helper_type_id)
+    params.permit(:name, :email, :password, :phone_number, :helper_type_id, :device_id)
   end
 
   def set_helper
