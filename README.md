@@ -18,7 +18,53 @@ This part is the API that supports the application on both User and Helper side.
 	 | name | string | User name |  
 	 | email | string | User email |  
 	 | password | string | User password |  
-	 | device_id | string | User device ID (Android) |  
+	 | device_id | string | User device ID (Android) |
+ - Response
+	```
+	{
+	    "id",
+	    "name",
+	    "email",
+	    "password"
+	    "device_id"
+	    "created_at",
+	    "updated_at"
+	}
+	```
+
+### Get list of Users    
+ - URL:  `/users`
+ - Method: `GET` 
+ - Response
+	```
+	[
+		{
+		    "id",
+		    "name",
+		    "email",
+		    "password"
+		    "device_id"
+		    "created_at",
+		    "updated_at"
+		}
+	]
+	```
+
+### Get User by ID    
+ - URL:  `/users/<id:integer>`
+ - Method: `GET` 
+ - Response
+	```
+	{
+	    "id",
+	    "name",
+	    "email",
+	    "password"
+	    "device_id"
+	    "created_at",
+	    "updated_at"
+	}
+	```
   
 ---  
 ## Helper    
@@ -35,11 +81,44 @@ This part is the API that supports the application on both User and Helper side.
 	 | password | string | Helper password |  
 	 | phone_number | string | Helper phone number |
 	 | helper_type_id | integer | Helper type |
+ - Response
+	```
+	{
+	    "id",
+	    "name",
+	    "email",
+	    "password",
+	    "phone_number",
+	    "helper_type_id",
+	    "created_at",
+	    "updated_at",
+	    "device_id",
+	    "longitude": null,
+	    "latitude": null
+	}
+	```
 
-### Retrieve all Helper    
+### Get list of Helpers    
  - URL:  `/helper`
  - Method: `GET` 
- - Headers: `Content-Type: application/json`  
+ - Response:
+	```
+	[
+		{
+			"id",
+			"name",
+			"email",
+			"password",
+			"phone_number",
+			"helper_type_id",
+			"created_at",
+			"updated_at",
+			"device_id",
+			"longitude",
+			"latitude"
+		}
+	]
+	```
 
 ### Update Helper location   
  - URL:  `/update_helper_location/<id:integer>`
@@ -51,6 +130,29 @@ This part is the API that supports the application on both User and Helper side.
 	 | ----- | ---- | ----------- |  
 	 | longitude | float | Helper longitude coordinate |
 	 | latitude | float | Helper latitude coordinate |
+ - Response:
+	None (`204 No Content`)
+
+---  
+## HelperType   
+### Create new HelperType    
+ - URL:  `/helper_types`
+ - Method: `POST` 
+ - Headers: `Content-Type: application/json`  
+ - Body    
+  
+	 | Field | Type | Description |    
+	 | ----- | ---- | ----------- |  
+	 | name | string | Helper type |  
+ - Response
+	```
+	{
+	    "id",
+	    "name",
+	    "created_at",
+	    "updated_at",
+	}
+	```
 
 ---  
 ## UserRequest    
@@ -67,6 +169,19 @@ This part is the API that supports the application on both User and Helper side.
 	 | longitude | float | User's longitude coordinate |  
 	 | latitude | float | User's latitude coordinate |  
 	 | device_id | string | User device ID (Android) |  
+ - Response
+	```
+	{
+	    "id",
+	    "user_id",
+	    "longitude",
+	    "latitude",
+	    "device_id",
+	    "created_at",
+	    "updated_at",
+	    "helper_type_id"
+	}
+	```
   
 ### Filter UserRequest based on Helper location and type
  - URL:  `/retrieve_request` 
@@ -79,3 +194,18 @@ This part is the API that supports the application on both User and Helper side.
 	 | helper_type_id | integer | HelperType ID that the User wants |  
 	 | longitude | float | User's longitude coordinate |  
 	 | latitude | float | User's latitude coordinate |
+ - Response
+	```
+	[
+	    {
+		    "id",
+		    "user_id",
+		    "longitude",
+		    "latitude",
+		    "device_id",
+		    "created_at",
+		    "updated_at",
+		    "helper_type_id"
+		}
+	]
+	```

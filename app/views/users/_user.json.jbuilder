@@ -1,1 +1,0 @@
-json.extract! user, :user_id, :email, :name, :device_id, :password
