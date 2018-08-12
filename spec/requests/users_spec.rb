@@ -24,12 +24,12 @@ RSpec.describe "Users API", type: :request do
   describe "GET /users/:id" do
     before { get "/users/#{user_id}" }
 
-    # context "when the record exists" do
-    #   it "returns the user" do
-    #     expect(json).not_to be_empty
-    #     expect(json['id']).to eq(user_id)
-    #   end
-    # end
+    context "when the record exists" do
+      it "returns the user" do
+        expect(json).not_to be_empty
+        expect(json['id']).to eq(user_id)
+      end
+    end
 
     context "when the record does not exist" do
       let(:user_id) { 100 }
@@ -45,7 +45,6 @@ RSpec.describe "Users API", type: :request do
     # valid payload
     let(:valid_attributes) {
       {
-          user_id: '1',
           name: 'Bandung',
           email: 'test@yahoo.com',
           password: 'lorem',
@@ -56,16 +55,12 @@ RSpec.describe "Users API", type: :request do
     context "when the request is valid" do
       before { post '/users', params: valid_attributes }
 
-      it "creates a user" do
-        expect(json['user_id']).to eq(1)
-      end
+      # it "creates a user" do
+      #   expect(json['id']).to eq(1)
+      # end
 
       it "returns status code 201" do
         expect(response).to have_http_status(201)
-      end
-
-      it "returns a validation failure message" do
-        expect(response.body).to match(//)
       end
     end
   end

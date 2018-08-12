@@ -5,5 +5,6 @@ FactoryBot.define do
     password { Faker::String.name }
     phone_number { Faker::PhoneNumber.phone_number }
     helper_type_id nil
+    device_id { Faker::String.name }
   end
 end

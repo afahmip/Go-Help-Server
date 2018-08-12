@@ -4,10 +4,6 @@ RSpec.describe User, type: :model do
   let(:user) { User.new }
   
   describe 'attributes' do
-    it "should have attributes user_id" do
-      expect(user).to respond_to :user_id
-    end
-
     it "should have attributes name" do
       expect(user).to respond_to :name
     end
