@@ -40,6 +40,23 @@ class UserRequestsController < ApplicationController
     head :no_content
   end
 
+  # POST /accept_request
+  def accept_request
+    @user_request = UserRequest.find(params[:user_request_id])
+    if not @user_request.helper_id
+      @user_request.update(accept_request_params)
+      render json: {
+          status: 200,
+          message: "Request successfully accepted"
+      }.to_json
+    else
+      render json: {
+          status: 500,
+          message: "Request already been accepted"
+      }.to_json
+    end
+  end
+
   # POST /retrieve_request
   def filter_request
     @user_requests = UserRequest.all
@@ -60,6 +77,10 @@ class UserRequestsController < ApplicationController
   end
 
   private
+
+  def accept_request_params
+    params.permit(:helper_id)
+  end
 
   def user_request_params
     params.permit(:user_id, :helper_type_id, :longitude, :latitude, :device_id)

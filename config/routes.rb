@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     post '/:id' => 'helper#update_location'
   end
 
+  scope '/accept_request' do
+    post '/' => 'user_requests#accept_request'
+  end
+
   # scope '/api' do
   #   scope '/v1' do
   #     scope '/projects' do

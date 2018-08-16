@@ -5314,3 +5314,214 @@ Processing by UsersController#index as JSON
 Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(760180102898772885)[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (49.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (24.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(760180102898772885)[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(760180102898772885)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddHelperIdToUserRequests (20180816093755)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (254.4ms)[0m  [1m[35mALTER TABLE "user_requests" ADD "helper_id" integer[0m
+  ↳ db/migrate/20180816093755_add_helper_id_to_user_requests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180816093755"]]
+  ↳ bin/rails:9
+  [1m[35m (197.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(760180102898772885)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:39:36 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fahmi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (26.9ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 36ms (Views: 4.2ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:39:58 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.3ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_requests" for 127.0.0.1 at 2018-08-16 16:40:44 +0700
+Processing by UserRequestsController#create as JSON
+  Parameters: {"user_id"=>1, "helper_type_id"=>1, "longitude"=>107.63814765, "latitude"=>-6.910903, "device_id"=>"c5ZVweQQ1Z8:APA91bEa1xLtvf2a0duEzCTKyR4bSdsagAeWxUnj78V78OsuLKkm32qkDfn2_bjozb7h3JhrT5-Yjqb_cOuFTnn5UG19stAZEVTEMwcguVoKxhnfgt-ONUjlEQOwhwDhcgWQO_bPtI0iWZXpOpMpGeK8wA2joMz9lA", "user_request"=>{"user_id"=>1, "longitude"=>107.63814765, "latitude"=>-6.910903, "device_id"=>"c5ZVweQQ1Z8:APA91bEa1xLtvf2a0duEzCTKyR4bSdsagAeWxUnj78V78OsuLKkm32qkDfn2_bjozb7h3JhrT5-Yjqb_cOuFTnn5UG19stAZEVTEMwcguVoKxhnfgt-ONUjlEQOwhwDhcgWQO_bPtI0iWZXpOpMpGeK8wA2joMz9lA", "helper_type_id"=>1}}
+Unpermitted parameters: :format, :user_request
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:17
+  [1m[36mUserRequest Create (9.5ms)[0m  [1m[32mINSERT INTO "user_requests" ("user_id", "longitude", "latitude", "device_id", "created_at", "updated_at", "helper_type_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["longitude", 107.63814765], ["latitude", -6.910903], ["device_id", "c5ZVweQQ1Z8:APA91bEa1xLtvf2a0duEzCTKyR4bSdsagAeWxUnj78V78OsuLKkm32qkDfn2_bjozb7h3JhrT5-Yjqb_cOuFTnn5UG19stAZEVTEMwcguVoKxhnfgt-ONUjlEQOwhwDhcgWQO_bPtI0iWZXpOpMpGeK8wA2joMz9lA"], ["created_at", "2018-08-16 09:40:44.877783"], ["updated_at", "2018-08-16 09:40:44.877783"], ["helper_type_id", 1]]
+  ↳ app/controllers/user_requests_controller.rb:17
+  [1m[35m (45.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_requests_controller.rb:17
+  [1m[36mHelper Load (39.0ms)[0m  [1m[34mSELECT "helpers".* FROM "helpers"[0m
+  ↳ app/controllers/user_requests_controller.rb:20
+Completed 201 Created in 516ms (Views: 1.2ms | ActiveRecord: 109.0ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:47:59 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.4ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:48:23 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `null' for #<UserRequestsController:0x00007f894ca33d60>):
+  
+app/controllers/user_requests_controller.rb:46:in `accept_request'
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:48:55 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+No template found for UserRequestsController#accept_request, rendering head :no_content
+Completed 204 No Content in 236ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:48:59 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.5ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:49:00 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.3ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:49:02 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.3ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:49:29 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+No template found for UserRequestsController#accept_request, rendering head :no_content
+Completed 204 No Content in 241ms (ActiveRecord: 3.8ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:50:56 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+No template found for UserRequestsController#accept_request, rendering head :no_content
+Completed 204 No Content in 224ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:52:06 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+No template found for UserRequestsController#accept_request, rendering head :no_content
+Completed 204 No Content in 252ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:52:22 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:54:32 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.1ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:54:52 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.1ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+Unpermitted parameters: :user_request_id, :user_request
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_requests_controller.rb:48
+  [1m[36mUserRequest Update (0.3ms)[0m  [1m[33mUPDATE "user_requests" SET "helper_id" = $1, "updated_at" = $2 WHERE "user_requests"."id" = $3[0m  [["helper_id", 1], ["updated_at", "2018-08-16 09:54:52.523796"], ["id", 1]]
+  ↳ app/controllers/user_requests_controller.rb:48
+  [1m[35m (119.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_requests_controller.rb:48
+Completed 204 No Content in 133ms (ActiveRecord: 122.2ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:54:55 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.3ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:56:22 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user_requests" for 127.0.0.1 at 2018-08-16 16:56:30 +0700
+Processing by UserRequestsController#index as JSON
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT "user_requests".* FROM "user_requests"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 16:56:36 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (0.2ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/accept_request" for 127.0.0.1 at 2018-08-16 17:03:06 +0700
+Processing by UserRequestsController#accept_request as */*
+  Parameters: {"user_request_id"=>1, "helper_id"=>1, "user_request"=>{"helper_id"=>1}}
+  [1m[36mUserRequest Load (1.0ms)[0m  [1m[34mSELECT  "user_requests".* FROM "user_requests" WHERE "user_requests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_requests_controller.rb:45
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 13.7ms)
+
+

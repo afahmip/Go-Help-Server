@@ -209,3 +209,29 @@ This part is the API that supports the application on both User and Helper side.
 		}
 	]
 	```
+
+### Accept UserRequest by ID
+ - URL:  `/accept_request` 
+ - Method: `POST` 
+ - Headers: `Content-Type: application/json`  
+ - Body    
+  
+	 | Field | Type | Description |    
+	 | ----- | ---- | ----------- |  
+	 | helper_id | integer | Helper ID that wants to accept the request |  
+	 | user_request_id | integer | UserRequest ID that wants to be accepted |  
+ - Response
+	- Success
+	```
+	{
+	    "status": 200,
+	    "message": "Request successfully accepted"
+	}
+	```
+	- Failed
+	```
+	{
+	    "status": 500,
+	    "message": "Request already been accepted"
+	}
+	```
